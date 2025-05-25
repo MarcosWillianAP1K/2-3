@@ -73,7 +73,12 @@ Arv23 *pegar_menor_da_esquerda(Arv23 *no)
 
 //================CASOS DA REMOÇÃO==================
 
+// Prototipo da função para os casos
 int remover_23_recursivo(Arv23 **raiz, int valor, int *sobe, Arv23 **pai);
+
+
+//ATENÇÃO O PAI PROVALMENTE VAI QUEBRAR OS CASO, CUIDADO
+//PROVALMENTE TER AQUE FAZER UMA VARIAVEL PAI SEPARADA NAS FUNÇÕES CASOS PARA EVITAR PROBLEMASS
 
 // Caso 1:
 
@@ -99,7 +104,7 @@ int no_folha_com_2_infos(Arv23 **raiz, int valor)
 
         (*raiz)->nInfo = 1; // Remove o segundo valor
     }
-    system("pause");
+
     return retorno;
 }
 
@@ -107,36 +112,70 @@ int no_folha_com_2_infos(Arv23 **raiz, int valor)
 
 int no_interno_com_2_infos(Arv23 **raiz, int valor, int *sobe, Arv23 **pai)
 {
-    int retorno = 0;
-    int sobe = 0;
+    int retorno = 0, sobe = 0;
 
     if (valor == (*raiz)->info1) // Remover info 1
     {
         retorno = (*raiz)->info1; // Retorna o valor removido
+
+        if ((*raiz)->cen->nInfo == 2)
+        {
+            (*raiz)->info1 = (*raiz)->cen->info1; // Pega o primeiro valor do nó da direita
+            // Remove a info trocada
+            remover_23_recursivo((*raiz)->cen, (*raiz)->cen->info1, sobe, raiz);
+        }
+        else if ((*raiz)->cen->nInfo == 1 && (*raiz)->dir->nInfo == 2)
+        {
+            Arv23 *menor_cen = pegar_menor_da_esquerda((*raiz)->cen);
+
+            (*raiz)->info1 = menor_cen->info1;
+
+            remover_23_recursivo((*raiz)->cen, menor_cen->info1, sobe, raiz);
+
+            if (eh_folha((*raiz)->cen) == 1)
+            {
+                Arv23 *novo_no = NULL;
+                novo_no = cria_no((*raiz)->dir->info1, (*raiz)->cen, (*raiz)->dir->esq);
+                
+                (*raiz)->cen = novo_no;
+                (*raiz)->dir->info1 = (*raiz)->dir->info2;
+                (*raiz)->dir->nInfo = 1;
+            }
+        }
+        else if ((*raiz)->dir->nInfo == 1 && (*raiz)->cen->nInfo == 1)
+        {
+            (*raiz)->info1 = (*raiz)->cen->info1;
+
+            //ESSE CASO NÃO FUNCIONA POIS PRECISA DOS CASOS BASES
+            //Talvez o pai fique null (Objetivo deixar no folha)
+            remover_23_recursivo(&(*raiz)->dir, (*raiz)->dir->info1, sobe, raiz);
+
+            
+
+        }
     }
     else // remover info 2
     {
-        retorno = (*raiz)->info2;                           // Retorna o valor removido
-        Arv23 *dir = pegar_menor_da_esquerda((*raiz)->dir); // Pega o menor valor da direita
-        Arv23 *cen = pegar_maior_da_direita((*raiz)->cen);  // Pega o maior valor do meio
+        retorno = (*raiz)->info2; // Retorna o valor removido
 
-        if (dir->nInfo == 2)
+        if ((*raiz)->dir->nInfo == 2)
         {
-
-            (*raiz)->info2 = dir->info1;               // Pega o primeiro valor do nó da direita
-            (*raiz)->dir->info1 = (*raiz)->dir->info2; // Passa o segundo valor do nó da direita para o primeiro
-            (*raiz)->dir->nInfo = 1;                   // Atualiza o número de informações no nó da direita
+            (*raiz)->info2 = (*raiz)->dir->info1; // Pega o primeiro valor do nó da direita
+            // Remove a info trocada
+            remover_23_recursivo((*raiz)->dir, (*raiz)->dir->info1, sobe, raiz);
         }
         else if ((*raiz)->dir->nInfo == 1 && (*raiz)->cen->nInfo == 2)
         {
             (*raiz)->info2 = (*raiz)->cen->info2; // Pega o primeiro valor do nó do meio
-            (*raiz)->cen->nInfo = 1;              // Atualiza o número de informações no nó do meio
+
+            remover_23_recursivo((*raiz)->cen, (*raiz)->cen->info2, sobe, raiz);
         }
-        else if (dir->nInfo == 1 && cen->nInfo == 1)
+        else if ((*raiz)->dir->nInfo == 1 && (*raiz)->cen->nInfo == 1)
         {
-           (*raiz)->info2 = dir->info1; // Pega o segundo valor do nó do meio
-            
-            remover_23_recursivo((*raiz)->dir, dir->info1, &sobe, raiz);
+            (*raiz)->cen->info2 = (*raiz)->dir->info1; // Pega o primeiro valor do nó da direita
+            (*raiz)->cen->nInfo = 2;                   // Atualiza o número de informações no nó do
+
+            remover_23_recursivo(&(*raiz)->dir, (*raiz)->dir->info1, sobe, raiz);
         }
     }
 
