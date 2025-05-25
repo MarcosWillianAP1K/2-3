@@ -27,13 +27,12 @@ Arv23 *cria_no(int info, Arv23 *F_esq, Arv23 *F_cen)
 
 //================BUSCA==================
 
-//================REMOÇÃO==================
-
+//================AUXILIARES REMOÇÃO==================
 
 int eh_folha(Arv23 *no)
 {
-   // -1 é null
-   int retorno = -1;
+    // -1 é null
+    int retorno = -1;
 
     if (no != NULL)
     {
@@ -48,7 +47,7 @@ int eh_folha(Arv23 *no)
     return retorno;
 }
 
-Arv23 *pegar_maior_da_direita(Arv23 *no)
+int pegar_maior_da_direita(Arv23 *no)
 {
     Arv23 *atual = no;
 
@@ -57,12 +56,55 @@ Arv23 *pegar_maior_da_direita(Arv23 *no)
         atual = atual->dir;
     }
 
-    return atual;
+    if (atual->nInfo == 1)
+    {
+        return atual->info1;
+    }
+    else
+    {
+        return atual->info2;
+    }
 }
+
+//================CASOS DA REMOÇÃO==================
+
+// Caso 1:
+
+// Caso 2:
+
+// Caso 3:
+
+int no_folha_com_2_infos(Arv23 **raiz, int valor)
+{
+    int retorno = 0;
+
+    // Remover o valor e ajustar o nó
+    if (valor == (*raiz)->info1)
+    {
+        retorno = (*raiz)->info1; // Retorna o valor removido
+
+        (*raiz)->info1 = (*raiz)->info2;
+        (*raiz)->nInfo = 1;
+    }
+    else
+    {
+        retorno = (*raiz)->info2; // Retorna o valor removido
+
+        (*raiz)->nInfo = 1; // Remove o segundo valor
+    }
+    system("pause");
+    return retorno;
+}
+
+// Caso 4:
+
+//================REMOÇÃO==================
+
+
 
 int remover_23_recursivo(Arv23 **raiz, int valor, int *sobe, Arv23 **pai)
 {
-    //O retorno é apenas para simular como seria pra voltar a informação do no removido
+    // O retorno é apenas para simular como seria pra voltar a informação do no removido
     int retorno = 0;
 
     if (raiz != NULL && *raiz != NULL)
@@ -71,7 +113,7 @@ int remover_23_recursivo(Arv23 **raiz, int valor, int *sobe, Arv23 **pai)
         {
             retorno = remover_23_recursivo(&(*raiz)->esq, valor, sobe, raiz);
         }
-        else if ((*raiz)->nInfo == 1 || valor < (*raiz)->info2)
+        else if ((*raiz)->nInfo == 1 || ((*raiz)->nInfo == 2 && valor < (*raiz)->info2 && valor > (*raiz)->info1))
         {
             retorno = remover_23_recursivo(&(*raiz)->cen, valor, sobe, raiz);
         }
@@ -81,74 +123,64 @@ int remover_23_recursivo(Arv23 **raiz, int valor, int *sobe, Arv23 **pai)
         }
         else
         {
-            //Verifica quanta infos tem no no
+            //!!!ATENÇÃO!!!
+            // APENAS O CASO SIMPLES ESTA IMPLEMNTADO
+            //A ideia é fazer funções pros casos, pois tem muitos Ifs, ai fica um caos.
+            //No caso aqui fica apenas os ifs de casos bases, 
+            //Caso 1: no folha com apenas um valor
+            //Caso 2: no interno com apenas um valor
+            //Caso 3: no folha com dois valores
+            //Caso 4: no interno com dois valores
+
+
+            // NO COM 1 INFO
             if ((*raiz)->nInfo == 1)
             {
                 // Caso 1: nó folha com apenas um valor
-                if (eh_folha(*raiz))
-                {   
+                if (eh_folha(*raiz) == 1)
+                {
                     retorno = (*raiz)->info1;
 
-                    
-
-                    free(*raiz); // Libera o nó
+                    free(*raiz);  // Libera o nó
                     *raiz = NULL; // Define o nó como NULL
                 }
-                else
+                else // Caso 2: nó interno com apenas um valor
                 {
-                    // Caso 2: nó interno com apenas um valor
-                    retorno = (*raiz)->info1; 
+
+                    retorno = (*raiz)->info1;
 
                     *sobe = (*raiz)->info1;
                     free(*raiz);
                     *raiz = NULL; // A lógica de remoção deve ser tratada pelo pai
                 }
             }
-            else //Else para 2 infos
+            else // ELSE PARA 2 INFOS
             {
-                // Caso 3: nó com dois valores
-                if (eh_folha(*raiz))
+                // Caso 3: nó folha com dois valores
+                if (eh_folha(*raiz) == 1)
                 {
-                    // Remover o valor e ajustar o nó
-                    if (valor == (*raiz)->info1)
-                    {
-                        retorno = (*raiz)->info1; // Retorna o valor removido
-
-                        (*raiz)->info1 = (*raiz)->info2;
-                        (*raiz)->nInfo = 1;
-                    }
-                    else
-                    {
-                        retorno = (*raiz)->info2; // Retorna o valor removido
-
-                        (*raiz)->nInfo = 1; // Remove o segundo valor
-                    }
+                    retorno = no_folha_com_2_infos(raiz, valor);
                 }
-                else
+                else // Caso 4: nó interno com dois valores
                 {
-                    // Lógica para remover de um nó interno com dois valores
-                    if (valor == (*raiz)->info1)
+
+                    if (valor == (*raiz)->info1) // Remover info 1
                     {
                         *sobe = (*raiz)->info2;
                         (*raiz)->nInfo = 1; // Ajusta o nó para ter apenas um valor
-                        retorno = (*raiz)->cen; // Retorna a subárvore central para subir
                     }
-                    else if (valor == (*raiz)->info2)
+                    else // remover info 2
                     {
-                        *sobe = (*raiz)->info2; // Valor a subir é o segundo valor do nó
-                        (*raiz)->nInfo = 1; // Ajusta o nó para ter apenas um valor
-                        retorno = (*raiz)->dir; // Retorna a subárvore direita para subir
                     }
                 }
             }
-            
         }
     }
 
     return retorno;
 }
 
-Arv23 *remover_23(Arv23 **raiz, int valor)
+int remover_23(Arv23 **raiz, int valor)
 {
     int sobe = 0;
     return remover_23_recursivo(raiz, valor, &sobe, NULL);
@@ -202,13 +234,14 @@ Arv23 *quebra_no(Arv23 **no, int info, int *sobe, Arv23 *F_dir)
     return maior;
 }
 
-Arv23 *insere_23_recursivo(Arv23 **raiz, int valor, Arv23 *pai, int *sobe)
+int insere_23_recursivo(Arv23 **raiz, int valor, Arv23 *pai, int *sobe, Arv23 **maiorNo)
 {
-    Arv23 *maiorNo = NULL;
+    int retorno = 0;
 
     if (*raiz == NULL)
     {
         *raiz = cria_no(valor, NULL, NULL);
+        retorno = 1; // Indica que o nó foi criado com sucesso
     }
     else if (valor != (*raiz)->info1 && ((*raiz)->nInfo != 2 || valor != (*raiz)->info2))
     {
@@ -220,49 +253,54 @@ Arv23 *insere_23_recursivo(Arv23 **raiz, int valor, Arv23 *pai, int *sobe)
             if ((*raiz)->nInfo == 1)
             { // nó folha com apenas um valor posso adicionar o novo valor
                 adiciona_infos(raiz, valor, NULL);
+                retorno = 1; // Indica que o nó foi atualizado com sucesso
             }
             else
             {
-                maiorNo = quebra_no(raiz, valor, sobe, NULL);
+                *maiorNo = quebra_no(raiz, valor, sobe, NULL);
 
                 if (pai == NULL)
                 {
-                    *raiz = cria_no(*sobe, *raiz, maiorNo);
-                    maiorNo = NULL;
+                    *raiz = cria_no(*sobe, *raiz, *maiorNo);
+                    *maiorNo = NULL;
                 }
+
+                retorno = 1; // Indica que o nó foi atualizado com sucesso
             }
         }
         else
         { // nó interno
             if (valor < (*raiz)->info1)
             {
-                maiorNo = insere_23_recursivo(&(*raiz)->esq, valor, *raiz, sobe);
+                retorno = insere_23_recursivo(&(*raiz)->esq, valor, *raiz, sobe, maiorNo);
             }
             else if (((*raiz)->nInfo == 1) || (valor < (*raiz)->info2))
             {
-                maiorNo = insere_23_recursivo(&(*raiz)->cen, valor, *raiz, sobe);
+                retorno = insere_23_recursivo(&(*raiz)->cen, valor, *raiz, sobe, maiorNo);
             }
             else
             {
-                maiorNo = insere_23_recursivo(&(*raiz)->dir, valor, *raiz, sobe);
+                retorno = insere_23_recursivo(&(*raiz)->dir, valor, *raiz, sobe, maiorNo);
             }
 
-            if (maiorNo != NULL)
+            if (*maiorNo != NULL)
             {
                 if ((*raiz)->nInfo == 1)
                 {
-                    adiciona_infos(raiz, *sobe, maiorNo);
-                    maiorNo = NULL;
+                    adiciona_infos(raiz, *sobe, *maiorNo);
+                    *maiorNo = NULL;
+                    retorno = 1; // Indica que o nó foi atualizado com sucesso
                 }
                 else
                 {
-                    maiorNo = quebra_no(raiz, *sobe, sobe, maiorNo);
+                    *maiorNo = quebra_no(raiz, *sobe, sobe, *maiorNo);
 
                     if (pai == NULL)
                     {
-                        *raiz = cria_no(*sobe, *raiz, maiorNo);
-                        maiorNo = NULL;
+                        *raiz = cria_no(*sobe, *raiz, *maiorNo);
+                        *maiorNo = NULL;
                     }
+                    retorno = 1; // Indica que o nó foi atualizado com sucesso
                 }
             }
         }
@@ -273,13 +311,17 @@ Arv23 *insere_23_recursivo(Arv23 **raiz, int valor, Arv23 *pai, int *sobe)
         printf("Valor %d ja existe na arvore!\n", valor); // no geral vai retornar NULL e verifica isso fora da função
     }
 
-    return maiorNo;
+    return retorno;
 }
 
-Arv23 *insere_23(Arv23 **raiz, int valor)
+//ATENÇÃO
+//Notei que o inserir não retorna se deu certo ou não, então fiz a função intermediaria e agora o maiorNo é passado por referência inves de retornar
+
+int insere_23(Arv23 **raiz, int valor)
 {
     int sobe = 0;
-    return insere_23_recursivo(raiz, valor, NULL, &sobe);
+    Arv23 *MaiorNo = NULL;
+    return insere_23_recursivo(raiz, valor, NULL, &sobe, &MaiorNo);
 }
 
 //===============IMPRIMIR RESULTADOS==================
@@ -426,47 +468,71 @@ void exibir(Arv23 *raiz, int espacos)
 int main()
 {
     Arv23 *raiz = NULL;
-    int valor;
+    int opcao, valor;
 
-    printf("Digite os valores a serem inseridos na Arvore 2-3 (digite -1 para sair):\n");
-    while (1)
+    do
     {
-        scanf("%d", &valor);
-        if (valor == -1)
+        system("cls||clear");
+        printf("\n=== MENU ARVORE 2-3 ===\n");
+        printf("1. Adicionar valor\n");
+        printf("2. Remover valor\n");
+        printf("3. Exibir arvore\n");
+        printf("4. Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
+        fflush(stdin); // Limpa o buffer de entrada
+
+        switch (opcao)
         {
+        case 1:
+            printf("Digite o valor a ser inserido: ");
+            scanf("%d", &valor);
+
+            
+
+            if (insere_23(&raiz, valor) != 0)
+            {
+                printf("Valor %d inserido com sucesso.\n", valor);
+            }
+            else
+            {
+                printf("Erro ao inserir valor %d.\n", valor);
+            }
+
+            break;
+
+        case 2:
+            printf("Digite o valor a ser removido: ");
+            scanf("%d", &valor);
+            if (remover_23(&raiz, valor) != 0)
+            {
+                printf("Valor %d removido com sucesso.\n", valor);
+            }
+            else
+            {
+                printf("Erro ao remover valor %d ou valor nao encontrado.\n", valor);
+            }
+            break;
+
+        case 3:
+            printf("\n\nArvore em ordem: ");
+            imprime_23_em_ordem(raiz);
+            printf("\n\nEstrutura da arvore:\n");
+            exibir(raiz, 0);
+            printf("\n");
+            
+            break;
+
+        case 4:
+            printf("Saindo...\n");
+            break;
+
+        default:
+            printf("Opcao invalida. Tente novamente.\n");
             break;
         }
-        insere_23(&raiz, valor);
-        printf("Arvore apos inserir %d: ", valor);
-        imprime_23_em_ordem(raiz);
-        printf("\n");
-    }
-
-    printf("\n=== RESULTADO FINAL ===\n");
-    printf("Valores em ordem: ");
-    imprime_23_em_ordem(raiz);
-    printf("\n\n");
-
-    printf("Estrutura da arvore (visual):\n");
-    if (raiz == NULL)
-    {
-        printf("Árvore vazia\n");
-    }
-    else
-    {
-        exibir(raiz, 0);
-        printf("\n");
-    }
-
-    printf("\nEstrutura da arvore (alternativa):\n");
-    if (raiz == NULL)
-    {
-        printf("Arvore vazia\n");
-    }
-    else
-    {
-        exibir(raiz, 0);
-    }
+        system("pause");
+    } while (opcao != 4);
 
     return 0;
 }
