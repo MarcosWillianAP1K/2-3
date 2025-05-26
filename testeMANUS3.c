@@ -1,20 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-// Estrutura do No da Arvore 2-3
-typedef struct Arv23
-{
-    int info1, info2;
-    int nInfo; // 0 (underflow temporario), 1 ou 2
-    struct Arv23 *esq, *cen, *dir;
-} Arv23;
-
-// Enum para status da remocao
-typedef enum {
-    OK,
-    UNDERFLOW
-} StatusRemocao;
+#include "testeMANUS3.h"
 
 // Prototipos das Funcoes
 Arv23 *cria_no(int info, Arv23 *F_esq, Arv23 *F_cen);
@@ -25,7 +12,7 @@ int insere_23_recursivo(Arv23 **raiz, int valor, Arv23 *pai, int *sobe, Arv23 **
 int insere_23(Arv23 **raiz, int valor);
 void imprime_23_em_ordem(Arv23 *raiz);
 void imprime_arvore_visual(Arv23 *raiz, char *prefixo, int eh_ultimo, int eh_raiz);
-Arv23* buscar_menor_elemento(Arv23 *no);
+Arv23 *buscar_menor_elemento(Arv23 *no);
 StatusRemocao remover_23_recursivo(Arv23 **ponteiro_no_pai, int valor, Arv23 *pai);
 int remover_23(Arv23 **raiz, int valor);
 StatusRemocao tratar_underflow(Arv23 **ponteiro_filho_no_pai, Arv23 *pai);
@@ -53,15 +40,19 @@ Arv23 *cria_no(int info, Arv23 *F_esq, Arv23 *F_cen)
 //================ VERIFICA FOLHA ==================
 int eh_folha(Arv23 *no)
 {
-    if (no == NULL) return -1;
+    if (no == NULL)
+        return -1;
     return (no->esq == NULL && no->cen == NULL && no->dir == NULL);
 }
 
 //================ BUSCAR MENOR (SUCESSOR IN-ORDER) ==================
-Arv23* buscar_menor_elemento(Arv23 *no) {
-    if (no == NULL) return NULL;
+Arv23 *buscar_menor_elemento(Arv23 *no)
+{
+    if (no == NULL)
+        return NULL;
     Arv23 *atual = no;
-    while (atual != NULL && atual->esq != NULL) {
+    while (atual != NULL && atual->esq != NULL)
+    {
         atual = atual->esq;
     }
     return atual;
@@ -70,44 +61,56 @@ Arv23* buscar_menor_elemento(Arv23 *no) {
 //================ FUNCOES AUXILIARES REMOCAO (CORRIGIDAS) ==================
 
 // Funcao principal para tratar underflow em um no filho
-StatusRemocao tratar_underflow(Arv23 **ponteiro_filho_no_pai, Arv23 *pai) {
+StatusRemocao tratar_underflow(Arv23 **ponteiro_filho_no_pai, Arv23 *pai)
+{
     Arv23 *filho_com_underflow = *ponteiro_filho_no_pai;
-    if (filho_com_underflow == NULL || filho_com_underflow->nInfo > 0) return OK;
+    if (filho_com_underflow == NULL || filho_com_underflow->nInfo > 0)
+        return OK;
 
     printf("Tratando underflow no filho do pai [%d%s%d]...\n",
-           pai->info1, pai->nInfo==2 ? ", " : " ", pai->nInfo==2 ? pai->info2 : -1);
+           pai->info1, pai->nInfo == 2 ? ", " : " ", pai->nInfo == 2 ? pai->info2 : -1);
 
     // Identifica irmaos baseado na posicao do filho
     Arv23 *irmao_esq = NULL;
     Arv23 *irmao_dir = NULL;
 
-    if (pai->esq == filho_com_underflow) {
+    if (pai->esq == filho_com_underflow)
+    {
         // Filho e o esquerdo
         irmao_dir = pai->cen;
-    } else if (pai->cen == filho_com_underflow) {
+    }
+    else if (pai->cen == filho_com_underflow)
+    {
         // Filho e o central
         irmao_esq = pai->esq;
-        if (pai->nInfo == 2) {
+        if (pai->nInfo == 2)
+        {
             irmao_dir = pai->dir;
         }
-    } else if (pai->nInfo == 2 && pai->dir == filho_com_underflow) {
+    }
+    else if (pai->nInfo == 2 && pai->dir == filho_com_underflow)
+    {
         // Filho e o direito
         irmao_esq = pai->cen;
     }
 
     // Tenta redistribuicao primeiro (irmao com 2 chaves)
-    if (irmao_dir != NULL && irmao_dir->nInfo == 2) {
+    if (irmao_dir != NULL && irmao_dir->nInfo == 2)
+    {
         return redistribuir_com_irmao_direito(ponteiro_filho_no_pai, pai, irmao_dir);
     }
-    if (irmao_esq != NULL && irmao_esq->nInfo == 2) {
+    if (irmao_esq != NULL && irmao_esq->nInfo == 2)
+    {
         return redistribuir_com_irmao_esquerdo(ponteiro_filho_no_pai, pai, irmao_esq);
     }
 
     // Tenta fusao (irmao com 1 chave)
-    if (irmao_dir != NULL && irmao_dir->nInfo == 1) {
+    if (irmao_dir != NULL && irmao_dir->nInfo == 1)
+    {
         return fundir_com_irmao_direito(ponteiro_filho_no_pai, pai, irmao_dir);
     }
-    if (irmao_esq != NULL && irmao_esq->nInfo == 1) {
+    if (irmao_esq != NULL && irmao_esq->nInfo == 1)
+    {
         return fundir_com_irmao_esquerdo(ponteiro_filho_no_pai, pai, irmao_esq);
     }
 
@@ -116,17 +119,21 @@ StatusRemocao tratar_underflow(Arv23 **ponteiro_filho_no_pai, Arv23 *pai) {
 }
 
 // Redistribui do irmao esquerdo (3-no) para o filho (underflow)
-StatusRemocao redistribuir_com_irmao_esquerdo(Arv23 **ponteiro_filho_no_pai, Arv23 *pai, Arv23 *irmao_esq) {
+StatusRemocao redistribuir_com_irmao_esquerdo(Arv23 **ponteiro_filho_no_pai, Arv23 *pai, Arv23 *irmao_esq)
+{
     printf("Redistribuindo com irmao esquerdo...\n");
     Arv23 *filho = *ponteiro_filho_no_pai;
     int chave_pai_desce;
     Arv23 *filho_transferido = irmao_esq->dir; // Filho mais a direita do irmao esq
 
     // Determina qual chave do pai desce
-    if (pai->cen == filho) { // Filho e o central
+    if (pai->cen == filho)
+    { // Filho e o central
         chave_pai_desce = pai->info1;
         pai->info1 = irmao_esq->info2;
-    } else { // pai->dir == filho (Filho e o direito)
+    }
+    else
+    { // pai->dir == filho (Filho e o direito)
         chave_pai_desce = pai->info2;
         pai->info2 = irmao_esq->info2;
     }
@@ -142,23 +149,27 @@ StatusRemocao redistribuir_com_irmao_esquerdo(Arv23 **ponteiro_filho_no_pai, Arv
     irmao_esq->nInfo = 1;
     irmao_esq->info2 = 0;
     irmao_esq->dir = irmao_esq->cen; // O filho central antigo vira o direito
-    irmao_esq->cen = NULL; // Limpa o ponteiro central (opcional, mas bom)
+    irmao_esq->cen = NULL;           // Limpa o ponteiro central (opcional, mas bom)
 
     return OK;
 }
 
 // Redistribui do irmao direito (3-no) para o filho (underflow)
-StatusRemocao redistribuir_com_irmao_direito(Arv23 **ponteiro_filho_no_pai, Arv23 *pai, Arv23 *irmao_dir) {
+StatusRemocao redistribuir_com_irmao_direito(Arv23 **ponteiro_filho_no_pai, Arv23 *pai, Arv23 *irmao_dir)
+{
     printf("Redistribuindo com irmao direito...\n");
     Arv23 *filho = *ponteiro_filho_no_pai;
     int chave_pai_desce;
     Arv23 *filho_transferido = irmao_dir->esq; // Filho mais a esquerda do irmao dir
 
     // Determina qual chave do pai desce
-    if (pai->esq == filho) { // Filho e o esquerdo
+    if (pai->esq == filho)
+    { // Filho e o esquerdo
         chave_pai_desce = pai->info1;
         pai->info1 = irmao_dir->info1;
-    } else { // pai->cen == filho (Filho e o central)
+    }
+    else
+    { // pai->cen == filho (Filho e o central)
         chave_pai_desce = pai->info2;
         pai->info2 = irmao_dir->info1;
     }
@@ -181,7 +192,8 @@ StatusRemocao redistribuir_com_irmao_direito(Arv23 **ponteiro_filho_no_pai, Arv2
 }
 
 // Funde o filho (underflow) com o irmao esquerdo (2-no) - CORRIGIDA
-StatusRemocao fundir_com_irmao_esquerdo(Arv23 **ponteiro_filho_no_pai, Arv23 *pai, Arv23 *irmao_esq) {
+StatusRemocao fundir_com_irmao_esquerdo(Arv23 **ponteiro_filho_no_pai, Arv23 *pai, Arv23 *irmao_esq)
+{
     printf("Fundindo com irmao esquerdo...\n");
     Arv23 *filho_underflow = *ponteiro_filho_no_pai;
     int chave_pai_desce;
@@ -192,21 +204,27 @@ StatusRemocao fundir_com_irmao_esquerdo(Arv23 **ponteiro_filho_no_pai, Arv23 *pa
     Arv23 *filho_u_cen = filho_underflow->cen;
 
     // Determina chave do pai que desce e ajusta pai, removendo o ponteiro para filho_underflow
-    if (pai->nInfo == 1) {
+    if (pai->nInfo == 1)
+    {
         // Pai e 2-no, filho e central (ponteiro_filho_no_pai == &(pai->cen))
         chave_pai_desce = pai->info1;
-        pai->nInfo = 0; // Pai entra em underflow
+        pai->nInfo = 0;  // Pai entra em underflow
         pai->cen = NULL; // Remove ponteiro central (apontava para filho_underflow)
         status_pai = UNDERFLOW;
-    } else { // Pai e 3-no
-        if (pai->cen == filho_underflow) { // Filho e central (ponteiro_filho_no_pai == &(pai->cen))
+    }
+    else
+    { // Pai e 3-no
+        if (pai->cen == filho_underflow)
+        { // Filho e central (ponteiro_filho_no_pai == &(pai->cen))
             chave_pai_desce = pai->info1;
             pai->info1 = pai->info2;
             pai->info2 = 0;
             pai->cen = pai->dir; // Shift dir para cen (irmao_esq continua em pai->esq)
             pai->dir = NULL;
             pai->nInfo = 1;
-        } else { // Filho e direito (ponteiro_filho_no_pai == &(pai->dir))
+        }
+        else
+        { // Filho e direito (ponteiro_filho_no_pai == &(pai->dir))
             chave_pai_desce = pai->info2;
             pai->info2 = 0;
             pai->dir = NULL; // Remove ponteiro direito (apontava para filho_underflow)
@@ -236,7 +254,8 @@ StatusRemocao fundir_com_irmao_esquerdo(Arv23 **ponteiro_filho_no_pai, Arv23 *pa
 }
 
 // Funde o filho (underflow) com o irmao direito (2-no) - CORRIGIDA
-StatusRemocao fundir_com_irmao_direito(Arv23 **ponteiro_filho_no_pai, Arv23 *pai, Arv23 *irmao_dir) {
+StatusRemocao fundir_com_irmao_direito(Arv23 **ponteiro_filho_no_pai, Arv23 *pai, Arv23 *irmao_dir)
+{
     printf("Fundindo com irmao direito...\n");
     Arv23 *filho_underflow = *ponteiro_filho_no_pai;
     int chave_pai_desce;
@@ -249,15 +268,19 @@ StatusRemocao fundir_com_irmao_direito(Arv23 **ponteiro_filho_no_pai, Arv23 *pai
     Arv23 *irmao_d_cen = irmao_dir->cen;
 
     // Determina chave do pai que desce e ajusta pai, removendo o ponteiro para filho_underflow
-    if (pai->nInfo == 1) {
+    if (pai->nInfo == 1)
+    {
         // Pai e 2-no, filho e esquerdo (ponteiro_filho_no_pai == &(pai->esq))
         chave_pai_desce = pai->info1;
-        pai->nInfo = 0; // Pai entra em underflow
+        pai->nInfo = 0;  // Pai entra em underflow
         pai->esq = NULL; // Remove ponteiro esquerdo (apontava para filho_underflow)
         status_pai = UNDERFLOW;
         // irmao_dir continua em pai->cen
-    } else { // Pai e 3-no
-        if (pai->esq == filho_underflow) { // Filho e esquerdo (ponteiro_filho_no_pai == &(pai->esq))
+    }
+    else
+    { // Pai e 3-no
+        if (pai->esq == filho_underflow)
+        { // Filho e esquerdo (ponteiro_filho_no_pai == &(pai->esq))
             chave_pai_desce = pai->info1;
             pai->info1 = pai->info2;
             pai->info2 = 0;
@@ -265,7 +288,9 @@ StatusRemocao fundir_com_irmao_direito(Arv23 **ponteiro_filho_no_pai, Arv23 *pai
             pai->cen = pai->dir;
             pai->dir = NULL;
             pai->nInfo = 1;
-        } else { // Filho e central (ponteiro_filho_no_pai == &(pai->cen))
+        }
+        else
+        { // Filho e central (ponteiro_filho_no_pai == &(pai->cen))
             chave_pai_desce = pai->info2;
             pai->info2 = 0;
             pai->cen = pai->dir; // Shift dir para cen (irmao_dir continua em pai->dir, que agora é pai->cen)
@@ -284,9 +309,9 @@ StatusRemocao fundir_com_irmao_direito(Arv23 **ponteiro_filho_no_pai, Arv23 *pai
 
     // Reorganiza os filhos corretamente para o novo nó [chave_pai_desce, irmao_dir->info2]
     // Filhos devem ser: filho_u_esq, irmao_d_esq, irmao_d_cen
-    irmao_dir->dir = irmao_d_cen;  // Filho central original do irmao_dir vira direito
-    irmao_dir->cen = irmao_d_esq;  // Filho esquerdo original do irmao_dir vira central
-    irmao_dir->esq = filho_u_esq;  // Filho esquerdo do nó em underflow vira esquerdo
+    irmao_dir->dir = irmao_d_cen; // Filho central original do irmao_dir vira direito
+    irmao_dir->cen = irmao_d_esq; // Filho esquerdo original do irmao_dir vira central
+    irmao_dir->esq = filho_u_esq; // Filho esquerdo do nó em underflow vira esquerdo
 
     // Libera no em underflow
     free(filho_underflow);
@@ -299,11 +324,13 @@ StatusRemocao fundir_com_irmao_direito(Arv23 **ponteiro_filho_no_pai, Arv23 *pai
 }
 
 //================ REMOCAO (Mantida, usa as funcoes de underflow corrigidas) ==================
-StatusRemocao remover_23_recursivo(Arv23 **ponteiro_no_pai, int valor, Arv23 *pai) {
+StatusRemocao remover_23_recursivo(Arv23 **ponteiro_no_pai, int valor, Arv23 *pai)
+{
     StatusRemocao status = OK;
     Arv23 *no_atual = *ponteiro_no_pai;
 
-    if (no_atual == NULL) {
+    if (no_atual == NULL)
+    {
         printf("Valor %d nao encontrado.\n", valor);
         return OK;
     }
@@ -312,54 +339,75 @@ StatusRemocao remover_23_recursivo(Arv23 **ponteiro_no_pai, int valor, Arv23 *pa
     int ir_dir = (no_atual->nInfo == 2 && valor > no_atual->info2);
     int ir_cen = (!ir_esq && !ir_dir && (valor != no_atual->info1 && (no_atual->nInfo == 1 || valor != no_atual->info2)));
 
-    if (ir_esq) {
+    if (ir_esq)
+    {
         status = remover_23_recursivo(&(no_atual->esq), valor, no_atual);
-        if (status == UNDERFLOW) {
+        if (status == UNDERFLOW)
+        {
             status = tratar_underflow(&(no_atual->esq), no_atual);
         }
-    } else if (ir_dir) {
+    }
+    else if (ir_dir)
+    {
         status = remover_23_recursivo(&(no_atual->dir), valor, no_atual);
-        if (status == UNDERFLOW) {
+        if (status == UNDERFLOW)
+        {
             status = tratar_underflow(&(no_atual->dir), no_atual);
         }
-    } else if (ir_cen) {
+    }
+    else if (ir_cen)
+    {
         status = remover_23_recursivo(&(no_atual->cen), valor, no_atual);
-        if (status == UNDERFLOW) {
+        if (status == UNDERFLOW)
+        {
             status = tratar_underflow(&(no_atual->cen), no_atual);
         }
-    } else { // Valor encontrado no no atual
+    }
+    else
+    { // Valor encontrado no no atual
         printf("Valor %d encontrado no no [%d%s%d]\n", valor, no_atual->info1,
-               no_atual->nInfo==2 ? ", " : " ", no_atual->nInfo==2 ? no_atual->info2 : -1);
+               no_atual->nInfo == 2 ? ", " : " ", no_atual->nInfo == 2 ? no_atual->info2 : -1);
 
-        if (eh_folha(no_atual)) {
-            if (no_atual->nInfo == 2) {
+        if (eh_folha(no_atual))
+        {
+            if (no_atual->nInfo == 2)
+            {
                 // Remove de folha 3-no
-                if (valor == no_atual->info1) {
+                if (valor == no_atual->info1)
+                {
                     no_atual->info1 = no_atual->info2;
                 }
                 no_atual->nInfo = 1;
                 no_atual->info2 = 0;
                 status = OK;
-            } else {
+            }
+            else
+            {
                 // Remove de folha 2-no
                 no_atual->nInfo = 0;
                 status = UNDERFLOW;
             }
-        } else {
+        }
+        else
+        {
             // Remove de no interno - substitui pelo sucessor
             Arv23 *sucessor_node = NULL;
             int valor_sucessor;
             Arv23 **ponteiro_subarvore_sucessor;
 
-            if (valor == no_atual->info1) {
+            if (valor == no_atual->info1)
+            {
                 sucessor_node = buscar_menor_elemento(no_atual->cen);
                 ponteiro_subarvore_sucessor = &(no_atual->cen);
-            } else { // valor == no_atual->info2
+            }
+            else
+            { // valor == no_atual->info2
                 sucessor_node = buscar_menor_elemento(no_atual->dir);
                 ponteiro_subarvore_sucessor = &(no_atual->dir);
             }
 
-            if (sucessor_node == NULL) {
+            if (sucessor_node == NULL)
+            {
                 fprintf(stderr, "Erro: Sucessor nao encontrado!\n");
                 return OK; // Ou algum status de erro
             }
@@ -368,15 +416,19 @@ StatusRemocao remover_23_recursivo(Arv23 **ponteiro_no_pai, int valor, Arv23 *pa
             printf("Substituindo por sucessor: %d\n", valor_sucessor);
 
             // Substitui o valor
-            if (valor == no_atual->info1) {
+            if (valor == no_atual->info1)
+            {
                 no_atual->info1 = valor_sucessor;
-            } else {
+            }
+            else
+            {
                 no_atual->info2 = valor_sucessor;
             }
 
             // Remove o sucessor recursivamente da subárvore apropriada
             status = remover_23_recursivo(ponteiro_subarvore_sucessor, valor_sucessor, no_atual);
-            if (status == UNDERFLOW) {
+            if (status == UNDERFLOW)
+            {
                 status = tratar_underflow(ponteiro_subarvore_sucessor, no_atual);
             }
         }
@@ -385,27 +437,35 @@ StatusRemocao remover_23_recursivo(Arv23 **ponteiro_no_pai, int valor, Arv23 *pa
     return status;
 }
 
-int remover_23(Arv23 **raiz, int valor) {
-    if (raiz == NULL || *raiz == NULL) {
+int remover_23(Arv23 **raiz, int valor)
+{
+    if (raiz == NULL || *raiz == NULL)
+    {
         return 0;
     }
 
     StatusRemocao status = remover_23_recursivo(raiz, valor, NULL);
 
     // Tratamento especial se a raiz entrou em underflow (acontece quando a raiz original é fundida)
-    if (status == UNDERFLOW && *raiz != NULL && (*raiz)->nInfo == 0) {
+    if (status == UNDERFLOW && *raiz != NULL && (*raiz)->nInfo == 0)
+    {
         printf("Raiz em underflow. Ajustando...\n");
         Arv23 *raiz_antiga = *raiz;
 
         // A nova raiz é o único filho restante (que agora contém a árvore fundida)
         // Este filho pode estar em esq ou cen dependendo da fusão
-        if (raiz_antiga->esq != NULL) {
+        if (raiz_antiga->esq != NULL)
+        {
             *raiz = raiz_antiga->esq;
-        } else if (raiz_antiga->cen != NULL) {
+        }
+        else if (raiz_antiga->cen != NULL)
+        {
             *raiz = raiz_antiga->cen;
-        } else {
-             // Isso não deveria acontecer se a fusão ocorreu corretamente
-             // Mas por segurança, se não houver filhos, a árvore fica vazia.
+        }
+        else
+        {
+            // Isso não deveria acontecer se a fusão ocorreu corretamente
+            // Mas por segurança, se não houver filhos, a árvore fica vazia.
             *raiz = NULL;
         }
 
@@ -519,7 +579,7 @@ int insere_23_recursivo(Arv23 **raiz, int valor, Arv23 *pai, int *sobe, Arv23 **
                 }
                 else
                 {
-                    Arv23* novo_maior = quebra_no(raiz, *sobe, sobe, *maiorNo);
+                    Arv23 *novo_maior = quebra_no(raiz, *sobe, sobe, *maiorNo);
                     *maiorNo = novo_maior;
                     if (pai == NULL)
                     {
@@ -566,10 +626,13 @@ void imprime_arvore_visual(Arv23 *raiz, char *prefixo, int eh_ultimo, int eh_rai
     if (raiz != NULL)
     {
         printf("%s", prefixo);
-        if (!eh_raiz) {
-             printf("%s", eh_ultimo ? "+------ " : "+------ ");
-        } else {
-             printf("         ");
+        if (!eh_raiz)
+        {
+            printf("%s", eh_ultimo ? "+------ " : "+------ ");
+        }
+        else
+        {
+            printf("         ");
         }
 
         if (raiz->nInfo == 1)
@@ -584,18 +647,21 @@ void imprime_arvore_visual(Arv23 *raiz, char *prefixo, int eh_ultimo, int eh_rai
         if (raiz->esq != NULL || raiz->cen != NULL || raiz->dir != NULL)
         {
             char novo_prefixo[512];
-            sprintf(novo_prefixo, "%s%s", prefixo, eh_raiz? "         " : (eh_ultimo ? "         " : "|        "));
+            sprintf(novo_prefixo, "%s%s", prefixo, eh_raiz ? "         " : (eh_ultimo ? "         " : "|        "));
             int tem_cen = (raiz->cen != NULL);
             int tem_dir = (raiz->dir != NULL);
 
-            if (raiz->esq != NULL) {
+            if (raiz->esq != NULL)
+            {
                 imprime_arvore_visual(raiz->esq, novo_prefixo, !tem_cen && !tem_dir, 0);
             }
-            if (raiz->cen != NULL) {
-                 imprime_arvore_visual(raiz->cen, novo_prefixo, !tem_dir, 0);
+            if (raiz->cen != NULL)
+            {
+                imprime_arvore_visual(raiz->cen, novo_prefixo, !tem_dir, 0);
             }
-            if (raiz->dir != NULL) {
-                 imprime_arvore_visual(raiz->dir, novo_prefixo, 1, 0);
+            if (raiz->dir != NULL)
+            {
+                imprime_arvore_visual(raiz->dir, novo_prefixo, 1, 0);
             }
         }
     }
@@ -610,7 +676,8 @@ int main()
 
     // Teste inicial
     printf("Inserindo valores (1-10)...\n");
-    for (int i = 1; i<=10; i++){
+    for (int i = 1; i <= 10; i++)
+    {
         insere_23(&raiz, i);
     }
     printf("Insercao concluida.\n");
@@ -628,24 +695,30 @@ int main()
         printf("3. Sair\n");
         printf("Escolha uma opcao: ");
 
-        if (scanf("%d", &opcao) != 1) {
-             printf("Entrada invalida. Por favor, insira um numero.\n");
-             while (getchar() != '\n');
-             opcao = 0;
-             continue;
+        if (scanf("%d", &opcao) != 1)
+        {
+            printf("Entrada invalida. Por favor, insira um numero.\n");
+            while (getchar() != '\n')
+                ;
+            opcao = 0;
+            continue;
         }
-        while (getchar() != '\n');
+        while (getchar() != '\n')
+            ;
 
         switch (opcao)
         {
         case 1:
             printf("Digite o valor a ser inserido: ");
-             if (scanf("%d", &valor) != 1) {
-                 printf("Entrada invalida.\n");
-                 while (getchar() != '\n');
-                 break;
-             }
-             while (getchar() != '\n');
+            if (scanf("%d", &valor) != 1)
+            {
+                printf("Entrada invalida.\n");
+                while (getchar() != '\n')
+                    ;
+                break;
+            }
+            while (getchar() != '\n')
+                ;
             if (insere_23(&raiz, valor))
             {
                 printf("Valor %d inserido com sucesso.\n", valor);
@@ -654,12 +727,15 @@ int main()
 
         case 2:
             printf("Digite o valor a ser removido: ");
-             if (scanf("%d", &valor) != 1) {
-                 printf("Entrada invalida.\n");
-                 while (getchar() != '\n');
-                 break;
-             }
-             while (getchar() != '\n');
+            if (scanf("%d", &valor) != 1)
+            {
+                printf("Entrada invalida.\n");
+                while (getchar() != '\n')
+                    ;
+                break;
+            }
+            while (getchar() != '\n')
+                ;
             printf("\n--- Iniciando remocao de %d ---\n", valor);
             if (remover_23(&raiz, valor))
             {
@@ -686,8 +762,6 @@ int main()
 
     return 0;
 }
-
-
 
 // //=============== MAIN (Modificado para Teste Automatizado) ==================
 // int main()
@@ -737,5 +811,3 @@ int main()
 
 //     return 0;
 // }
-
-
