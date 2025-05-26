@@ -1,0 +1,160 @@
+
+
+=== TESTE DE INSERCAO NA ARVORE 2-3 COM VETOR DECRESCENTE ===
+
+
+Sequencia de valores para insercao: 10 9 8 7 6 5 4 3 2 1 
+
+
+------------------------------------------------
+Inserindo o valor: 10
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [10]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 9
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [9, 10]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 8
+Raiz original quebrou. Criando nova raiz com valor 9.
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [9]
+         +------ [8]
+         `------ [10]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 7
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [9]
+         +------ [7, 8]
+         `------ [10]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 6
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [7, 9]
+         +------ [6]
+         +------ [8]
+         `------ [10]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 5
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [7, 9]
+         +------ [5, 6]
+         +------ [8]
+         `------ [10]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 4
+Raiz original quebrou. Criando nova raiz com valor 7.
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [7]
+         +------ [5]
+         |        +------ [4]
+         |        `------ [6]
+         `------ [9]
+                  +------ [8]
+                  `------ [10]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 3
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [7]
+         +------ [5]
+         |        +------ [3, 4]
+         |        `------ [6]
+         `------ [9]
+                  +------ [8]
+                  `------ [10]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 2
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [7]
+         +------ [3, 5]
+         |        +------ [2]
+         |        +------ [4]
+         |        `------ [6]
+         `------ [9]
+                  +------ [8]
+                  `------ [10]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 1
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [7]
+         +------ [3, 5]
+         |        +------ [1, 2]
+         |        +------ [4]
+         |        `------ [6]
+         `------ [9]
+                  +------ [8]
+                  `------ [10]
+
+------------------------------------------------
+
+
+Todos os valores do vetor DECRESCENTE foram inseridos!
+
+Arvore final apos insercoes com vetor DECRESCENTE:
+
+ Raiz--> [7]
+         +------ [3, 5]
+         |        +------ [1, 2]
+         |        +------ [4]
+         |        `------ [6]
+         `------ [9]
+                  +------ [8]
+                  `------ [10]
+

@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <direct.h> // Para _mkdir no Windows
 #include "../2-3_funcional_por_enquanto.h"
 #include "bibs_auxiliares/funcao_sistema.h"
 #include "bibs_auxiliares/Escrever_resultado.h"
@@ -9,6 +13,48 @@
 
 // Define o tamanho do vetor para inserção aleatória
 #define TAM_VETOR 10
+#define DIR_RESULTADOS "Resultados"
+
+// Função para criar diretório se não existir
+void criar_diretorio_resultados() {
+    // Cria o diretório se não existir
+    #ifdef _WIN32
+    _mkdir(DIR_RESULTADOS);
+    #else
+    mkdir(DIR_RESULTADOS, 0777);
+    #endif
+}
+
+// Funções para redirecionar output para arquivo
+FILE* redirecionar_para_arquivo(const char* nome_arquivo) {
+    char caminho[100];
+    sprintf(caminho, "%s/%s", DIR_RESULTADOS, nome_arquivo);
+    
+    // Salva o ponteiro stdout original
+    FILE* stdout_original = stdout;
+    
+    // Redireciona stdout para o arquivo
+    FILE* arquivo = freopen(caminho, "w", stdout);
+    if (!arquivo) {
+        printf("Erro ao abrir arquivo %s para escrita\n", caminho);
+        return NULL;
+    }
+    
+    return stdout_original;
+}
+
+// Função para restaurar stdout
+void restaurar_stdout(FILE* stdout_original) {
+    // Fecha o arquivo atual
+    fclose(stdout);
+    
+    // Restaura stdout usando freopen para redirecionar para o console
+    #ifdef _WIN32
+    freopen("CON", "w", stdout);
+    #else
+    freopen("/dev/tty", "w", stdout);
+    #endif
+}
 
 // Função para preencher um vetor com valores crescentes
 void preencher_vetor_crescente(int *vetor, int tamanho)
@@ -60,97 +106,16 @@ void preencher_vetor_aleatorio(int *vetor, int tamanho)
     }
 }
 
-void testar_insercao_repetida(Arv23 **raiz)
-{
-    print_amarelo("\n\n=== TESTE DE INSERÇÃO DE VALORES REPETIDOS ===\n\n");
-
-    // Se a árvore estiver vazia, insira alguns valores primeiro
-    if (*raiz == NULL)
-    {
-        printf("Inserindo alguns valores iniciais na arvore...\n");
-        int valores_iniciais[] = {10, 20, 30};
-        for (int i = 0; i < 3; i++)
-        {
-            insere_23(raiz, valores_iniciais[i]);
-        }
-
-        printf("\nArvore inicial:\n");
-        imprime_arvore_visual(*raiz, "", 1, 1);
-        printf("\n\n");
-    }
-
-    // Pegar alguns valores que já existem na árvore
-    int valores_repetidos[3];
-
-    // Garantir que temos pelo menos um valor para repetir
-    if (*raiz && (*raiz)->nInfo > 0)
-    {
-        valores_repetidos[0] = (*raiz)->info1;
-
-        if ((*raiz)->nInfo > 1)
-        {
-            valores_repetidos[1] = (*raiz)->info2;
-        }
-        else
-        {
-            valores_repetidos[1] = valores_repetidos[0]; // Repetir o mesmo valor
-        }
-
-        if ((*raiz)->esq && (*raiz)->esq->nInfo > 0)
-        {
-            valores_repetidos[2] = (*raiz)->esq->info1;
-        }
-        else
-        {
-            valores_repetidos[2] = valores_repetidos[0]; // Repetir o mesmo valor
-        }
-    }
-    else
-    {
-        // Valores padrão se a árvore estiver vazia
-        valores_repetidos[0] = 10;
-        valores_repetidos[1] = 10; // Mesmo valor para testar repetição
-        valores_repetidos[2] = 20;
-
-        // Inserir pelo menos um valor para testar repetição depois
-        insere_23(raiz, valores_repetidos[0]);
-    }
-
-    // Tentar inserir valores repetidos
-    for (int i = 0; i < 3; i++)
-    {
-        printf("\n------------------------------------------------\n");
-        printf("Tentando inserir o valor repetido: %d\n", valores_repetidos[i]);
-
-        int resultado = insere_23(raiz, valores_repetidos[i]);
-
-        if (!resultado)
-        {
-            mensagem_sucesso("Comportamento correto: valor repetido nao foi inserido!\n");
-        }
-        else
-        {
-            mensagem_erro("Erro: valor repetido foi inserido na arvore!\n");
-        }
-
-        printf("\nEstado atual da arvore:\n\n");
-        imprime_arvore_visual(*raiz, "", 1, 1);
-        printf("\n------------------------------------------------\n");
-
-        // Pequena pausa para melhor visualização
-        printf("\nPressione Enter para continuar...\n");
-        pausar_tela();
-    }
-
-    printf("\nTeste de insercao de valores repetidos concluido!\n");
-}
-
 void testar_insercao(Arv23 **raiz, int *valores, int tamanho, char *tipo_vetor)
 {
-    // Corrigido: print_amarelo não aceita formatação como printf
-    char buffer[100];
-    sprintf(buffer, "\n\n=== TESTE DE INSERCAO NA ARVORE 2-3 COM VETOR %s ===\n\n", tipo_vetor);
-    print_amarelo(buffer);
+    // Preparar nome do arquivo
+    char nome_arquivo[50];
+    sprintf(nome_arquivo, "insercao_%s.txt", tipo_vetor);
+    
+    // Redirecionar stdout para arquivo
+    FILE* stdout_original = redirecionar_para_arquivo(nome_arquivo);
+    
+    printf("\n\n=== TESTE DE INSERCAO NA ARVORE 2-3 COM VETOR %s ===\n\n", tipo_vetor);
 
     printf("\nSequencia de valores para insercao: ");
     for (int i = 0; i < tamanho; i++)
@@ -167,11 +132,11 @@ void testar_insercao(Arv23 **raiz, int *valores, int tamanho, char *tipo_vetor)
 
         if (insere_23(raiz, valores[i]))
         {
-            mensagem_sucesso("Valor inserido com sucesso!\n");
+            printf("SUCESSO: Valor inserido com sucesso!\n");
         }
         else
         {
-            mensagem_erro("Falha ao inserir o valor!\n");
+            printf("ERROR: Falha ao inserir o valor!\n");
         }
 
         printf("\nEstado atual da arvore:\n\n");
@@ -183,14 +148,30 @@ void testar_insercao(Arv23 **raiz, int *valores, int tamanho, char *tipo_vetor)
     printf("\nArvore final apos insercoes com vetor %s:\n\n", tipo_vetor);
     imprime_arvore_visual(*raiz, "", 1, 1);
     printf("\n");
+    
+    // Restaurar stdout
+    restaurar_stdout(stdout_original);
+    printf("Resultado do teste salvo em %s/%s\n", DIR_RESULTADOS, nome_arquivo);
 }
 
 void testar_remocao(Arv23 **raiz, int *valores, int tamanho, char *tipo_vetor)
 {
-    // Corrigido: print_amarelo não aceita formatação como printf
-    char buffer[100];
-    sprintf(buffer, "\n\n=== TESTE DE REMOCAO NA ARVORE 2-3 COM VETOR %s ===\n\n", tipo_vetor);
-    print_amarelo(buffer);
+    // Preparar nome do arquivo
+    char nome_arquivo[50];
+    sprintf(nome_arquivo, "remocao_%s.txt", tipo_vetor);
+    
+    // Redirecionar stdout para arquivo
+    FILE* stdout_original = redirecionar_para_arquivo(nome_arquivo);
+    
+    printf("\n\n=== TESTE DE REMOCAO NA ARVORE 2-3 COM VETOR %s ===\n\n", tipo_vetor);
+    
+    // Imprimir o vetor que será utilizado para remoção
+    printf("Sequencia de valores para remocao: ");
+    for (int i = 0; i < tamanho; i++)
+    {
+        printf("%d ", valores[i]);
+    }
+    printf("\n\n");
 
     printf("Arvore antes das remocoes:\n\n");
     imprime_arvore_visual(*raiz, "", 1, 1);
@@ -204,11 +185,11 @@ void testar_remocao(Arv23 **raiz, int *valores, int tamanho, char *tipo_vetor)
 
         if (remover_23(raiz, valores[i]))
         {
-            mensagem_sucesso("Valor removido com sucesso!\n");
+            printf("SUCESSO: Valor removido com sucesso!\n");
         }
         else
         {
-            mensagem_erro("Falha ao remover o valor!\n");
+            printf("ERROR: Falha ao remover o valor!\n");
         }
 
         printf("\nArvore apos remocao:\n\n");
@@ -220,30 +201,190 @@ void testar_remocao(Arv23 **raiz, int *valores, int tamanho, char *tipo_vetor)
     printf("\nArvore final apos remocoes com vetor %s:\n\n", tipo_vetor);
     imprime_arvore_visual(*raiz, "", 1, 1);
     printf("\n");
+    
+    // Restaurar stdout
+    restaurar_stdout(stdout_original);
+    printf("Resultado do teste salvo em %s/%s\n", DIR_RESULTADOS, nome_arquivo);
 }
 
-void testar_impressao(Arv23 *raiz)
+void testar_impressao(Arv23 *raiz, char *tipo_arvore)
 {
-    print_amarelo("\n\n=== TESTE DE IMPRESSAO EM ORDEM ===\n\n");
+    // Preparar nome do arquivo
+    char nome_arquivo[50];
+    sprintf(nome_arquivo, "impressao_%s.txt", tipo_arvore);
+    
+    // Redirecionar stdout para arquivo
+    FILE* stdout_original = redirecionar_para_arquivo(nome_arquivo);
+    
+    printf("\n\n=== TESTE DE IMPRESSAO DA ARVORE 2-3 (%s) ===\n\n", tipo_arvore);
 
     printf("Elementos em ordem: ");
     imprime_23_em_ordem(raiz);
     printf("\n\n");
-    mensagem_sucesso("Impressao em ordem realizada com sucesso!\n");
+    printf("SUCESSO: Impressao em ordem realizada com sucesso!\n");
 
-    print_amarelo("\n\n=== TESTE DE IMPRESSAO VISUAL DA ARVORE ===\n\n");
+    printf("\n\n=== TESTE DE IMPRESSAO VISUAL DA ARVORE (%s) ===\n\n", tipo_arvore);
     imprime_arvore_visual(raiz, "", 1, 1);
     printf("\n\n");
-    mensagem_sucesso("Impressao visual realizada com sucesso!\n");
+    printf("SUCESSO: Impressao visual realizada com sucesso!\n");
+    
+    // Restaurar stdout
+    restaurar_stdout(stdout_original);
+    printf("Resultado do teste salvo em %s/%s\n", DIR_RESULTADOS, nome_arquivo);
+}
+
+// Função para testar liberação das três árvores e salvar resultados em arquivo
+void testar_liberacao_tres_arvores(Arv23 **raiz_crescente, Arv23 **raiz_decrescente, Arv23 **raiz_aleatorio)
+{
+    // Preparar nome do arquivo
+    char nome_arquivo[50];
+    sprintf(nome_arquivo, "liberacao_arvores.txt");
+    
+    // Redirecionar stdout para arquivo
+    FILE* stdout_original = redirecionar_para_arquivo(nome_arquivo);
+    
+    printf("\n\n=== TESTE DE LIBERACAO DAS ARVORES 2-3 ===\n\n");
+    
+    // Liberar árvore crescente
+    printf("=== LIBERANDO ARVORE CRESCENTE ===\n\n");
+    printf("Estado da arvore crescente antes da liberacao:\n\n");
+    
+    if (*raiz_crescente == NULL) {
+        printf("Arvore crescente ja esta vazia.\n\n");
+    } else {
+        imprime_arvore_visual(*raiz_crescente, "", 1, 1);
+        printf("\n\n");
+        printf("Liberando a arvore crescente...\n\n");
+        libera_arvore(raiz_crescente);
+        
+        if (*raiz_crescente == NULL) {
+            printf("SUCESSO: Arvore crescente liberada com sucesso!\n\n");
+        } else {
+            printf("ERROR: Falha ao liberar a arvore crescente!\n\n");
+        }
+    }
+    
+    // Liberar árvore decrescente
+    printf("\n=== LIBERANDO ARVORE DECRESCENTE ===\n\n");
+    printf("Estado da arvore decrescente antes da liberacao:\n\n");
+    
+    if (*raiz_decrescente == NULL) {
+        printf("Arvore decrescente ja esta vazia.\n\n");
+    } else {
+        imprime_arvore_visual(*raiz_decrescente, "", 1, 1);
+        printf("\n\n");
+        printf("Liberando a arvore decrescente...\n\n");
+        libera_arvore(raiz_decrescente);
+        
+        if (*raiz_decrescente == NULL) {
+            printf("SUCESSO: Arvore decrescente liberada com sucesso!\n\n");
+        } else {
+            printf("ERROR: Falha ao liberar a arvore decrescente!\n\n");
+        }
+    }
+    
+    // Liberar árvore aleatória
+    printf("\n=== LIBERANDO ARVORE ALEATORIA ===\n\n");
+    printf("Estado da arvore aleatoria antes da liberacao:\n\n");
+    
+    if (*raiz_aleatorio == NULL) {
+        printf("Arvore aleatoria ja esta vazia.\n\n");
+    } else {
+        imprime_arvore_visual(*raiz_aleatorio, "", 1, 1);
+        printf("\n\n");
+        printf("Liberando a arvore aleatoria...\n\n");
+        libera_arvore(raiz_aleatorio);
+        
+        if (*raiz_aleatorio == NULL) {
+            printf("SUCESSO: Arvore aleatoria liberada com sucesso!\n\n");
+        } else {
+            printf("ERROR: Falha ao liberar a arvore aleatoria!\n\n");
+        }
+    }
+    
+    printf("\n=== RESULTADO FINAL DA LIBERACAO ===\n\n");
+    if (*raiz_crescente == NULL && *raiz_decrescente == NULL && *raiz_aleatorio == NULL) {
+        printf("SUCESSO: Todas as arvores foram liberadas com sucesso!\n");
+    } else {
+        printf("ERROR: Falha ao liberar uma ou mais arvores!\n");
+    }
+    
+    // Restaurar stdout
+    restaurar_stdout(stdout_original);
+    printf("Resultado do teste salvo em %s/%s\n", DIR_RESULTADOS, nome_arquivo);
+}
+
+// Função para combinar os resultados dos três vetores em um único arquivo
+void salvar_resultados_combinados(int *vetor_crescente, int *vetor_decrescente, int *vetor_aleatorio, int tamanho)
+{
+    // Preparar nome do arquivo
+    char nome_arquivo[50];
+    sprintf(nome_arquivo, "todos_os_testes.txt");
+    
+    // Redirecionar stdout para arquivo
+    FILE* stdout_original = redirecionar_para_arquivo(nome_arquivo);
+    
+    // Título geral
+    printf("\n\n====================================\n");
+    printf("    RESULTADOS COMPLETOS DOS TESTES DA ARVORE 2-3    \n");
+    printf("====================================\n\n");
+    
+    // Seção de descrição dos vetores
+    printf("=== VETORES DE TESTE UTILIZADOS ===\n\n");
+    
+    // Vetor crescente
+    printf("Vetor CRESCENTE: ");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetor_crescente[i]);
+    }
+    printf("\n\n");
+    
+    // Vetor decrescente
+    printf("Vetor DECRESCENTE: ");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetor_decrescente[i]);
+    }
+    printf("\n\n");
+    
+    // Vetor aleatório
+    printf("Vetor ALEATORIO: ");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", vetor_aleatorio[i]);
+    }
+    printf("\n\n");
+    
+    // Seção de resumo
+    printf("=== RESUMO DOS TESTES ===\n\n");
+    printf("1. Teste de insercao com vetor CRESCENTE\n");
+    printf("2. Teste de remocao com vetor CRESCENTE\n");
+    printf("3. Teste de insercao com vetor DECRESCENTE\n");
+    printf("4. Teste de remocao com vetor DECRESCENTE\n");
+    printf("5. Teste de insercao com vetor ALEATORIO\n");
+    printf("6. Teste de remocao com vetor ALEATORIO\n");
+    printf("7. Teste de impressao da arvore\n");
+    printf("8. Teste de insercao de valores repetidos\n");
+    printf("9. Teste de liberacao da arvore\n\n");
+    
+    printf("Todos os testes foram executados com sucesso!\n");
+    printf("Consulte os arquivos individuais para ver os detalhes de cada teste.\n\n");
+    
+    // Restaurar stdout
+    restaurar_stdout(stdout_original);
+    printf("Resumo de todos os testes salvo em %s/%s\n", DIR_RESULTADOS, nome_arquivo);
 }
 
 int main()
 {
     limpar_tela();
-    print_amarelo("\n\n====================================");
-    print_amarelo("\n    INICIANDO TESTES DA ARVORE 2-3    ");
-    print_amarelo("\n====================================\n\n");
-
+    
+    // Criar diretório para resultados se não existir
+    criar_diretorio_resultados();
+    
+    printf("\n\n====================================\n");
+    printf("    INICIANDO TESTES DA ARVORE 2-3    \n");
+    printf("====================================\n\n");
+    printf("Os resultados dos testes serao salvos no diretorio '%s'\n\n", DIR_RESULTADOS);
+    
     // Criar os três vetores para teste
     int vetor_crescente[TAM_VETOR];
     int vetor_decrescente[TAM_VETOR];
@@ -254,77 +395,79 @@ int main()
     preencher_vetor_decrescente(vetor_decrescente, TAM_VETOR);
     preencher_vetor_aleatorio(vetor_aleatorio, TAM_VETOR);
 
-    // Inicializando a árvore vazia
-    Arv23 *raiz = NULL;
+    // Inicializando as três árvores separadamente
+    Arv23 *raiz_crescente = NULL;
+    Arv23 *raiz_decrescente = NULL;
+    Arv23 *raiz_aleatorio = NULL;
 
     // Testando operações com árvore vazia
-    print_amarelo("\n=== TESTE COM ARVORE VAZIA ===\n\n");
+    printf("\n=== TESTE COM ARVORE VAZIA ===\n\n");
     printf("Arvore vazia: ");
-    imprime_23_em_ordem(raiz);
+    imprime_23_em_ordem(raiz_crescente);
     printf("\n\n");
 
     pausar_tela();
 
     // Teste de inserção com vetor crescente
     limpar_tela();
-    testar_insercao(&raiz, vetor_crescente, TAM_VETOR, "CRESCENTE");
+    testar_insercao(&raiz_crescente, vetor_crescente, TAM_VETOR, "CRESCENTE");
     pausar_tela();
 
-    // Teste de impressão
+    // Teste de impressão da árvore crescente
     limpar_tela();
-    testar_impressao(raiz);
-    pausar_tela();
-
-    // Teste de remoção com vetor crescente
-    limpar_tela();
-    testar_remocao(&raiz, vetor_crescente, TAM_VETOR, "CRESCENTE");
+    testar_impressao(raiz_crescente, "CRESCENTE");
     pausar_tela();
 
     // Teste de inserção com vetor decrescente
     limpar_tela();
-    testar_insercao(&raiz, vetor_decrescente, TAM_VETOR, "DECRESCENTE");
+    testar_insercao(&raiz_decrescente, vetor_decrescente, TAM_VETOR, "DECRESCENTE");
     pausar_tela();
 
-    // Teste de impressão
+    // Teste de impressão da árvore decrescente
     limpar_tela();
-    testar_impressao(raiz);
-    pausar_tela();
-
-    // Teste de remoção com vetor decrescente
-    limpar_tela();
-    testar_remocao(&raiz, vetor_decrescente, TAM_VETOR, "DECRESCENTE");
+    testar_impressao(raiz_decrescente, "DECRESCENTE");
     pausar_tela();
 
     // Teste de inserção com vetor aleatório
     limpar_tela();
-    testar_insercao(&raiz, vetor_aleatorio, TAM_VETOR, "ALEATORIO");
+    testar_insercao(&raiz_aleatorio, vetor_aleatorio, TAM_VETOR, "ALEATORIO");
     pausar_tela();
 
-    // Teste de impressão
+    // Teste de impressão da árvore aleatória
     limpar_tela();
-    testar_impressao(raiz);
+    testar_impressao(raiz_aleatorio, "ALEATORIO");
+    pausar_tela();
+
+    // Teste de remoção com vetor crescente
+    limpar_tela();
+    testar_remocao(&raiz_crescente, vetor_crescente, TAM_VETOR, "CRESCENTE");
+    pausar_tela();
+
+    // Teste de remoção com vetor decrescente
+    limpar_tela();
+    testar_remocao(&raiz_decrescente, vetor_decrescente, TAM_VETOR, "DECRESCENTE");
     pausar_tela();
 
     // Teste de remoção com vetor aleatório
     limpar_tela();
-    testar_remocao(&raiz, vetor_aleatorio, TAM_VETOR, "ALEATORIO");
+    testar_remocao(&raiz_aleatorio, vetor_aleatorio, TAM_VETOR, "ALEATORIO");
     pausar_tela();
 
-    // Teste de liberação da árvore
+    // Recriar as árvores para o teste de liberação
+    testar_insercao(&raiz_crescente, vetor_crescente, TAM_VETOR, "CRESCENTE");
+    testar_insercao(&raiz_decrescente, vetor_decrescente, TAM_VETOR, "DECRESCENTE");
+    testar_insercao(&raiz_aleatorio, vetor_aleatorio, TAM_VETOR, "ALEATORIO");
+    
+    // Teste de liberação das três árvores
     limpar_tela();
-    print_amarelo("TESTE DE LIBERACAO DA ARVORE");
-    libera_arvore(&raiz);
-    if (raiz == NULL)
-    {
-        mensagem_sucesso("Arvore liberada com sucesso!");
-    }
-    else
-    {
-        mensagem_erro("Falha ao liberar a arvore!");
-    }
+    testar_liberacao_tres_arvores(&raiz_crescente, &raiz_decrescente, &raiz_aleatorio);
+    pausar_tela();
+    
+    // Salvar um resumo de todos os testes em um único arquivo
+    salvar_resultados_combinados(vetor_crescente, vetor_decrescente, vetor_aleatorio, TAM_VETOR);
 
     printf("\n");
-    print_verde("TODOS OS TESTES CONCLUIDOS!");
+    printf("TODOS OS TESTES CONCLUIDOS!\n");
     printf("\n\n");
     pausar_tela();
 

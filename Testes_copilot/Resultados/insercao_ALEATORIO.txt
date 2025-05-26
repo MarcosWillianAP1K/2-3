@@ -1,0 +1,156 @@
+
+
+=== TESTE DE INSERCAO NA ARVORE 2-3 COM VETOR ALEATORIO ===
+
+
+Sequencia de valores para insercao: 28 42 39 38 49 33 9 5 41 26 
+
+
+------------------------------------------------
+Inserindo o valor: 28
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [28]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 42
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [28, 42]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 39
+Raiz original quebrou. Criando nova raiz com valor 39.
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [39]
+         +------ [28]
+         `------ [42]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 38
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [39]
+         +------ [28, 38]
+         `------ [42]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 49
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [39]
+         +------ [28, 38]
+         `------ [42, 49]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 33
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [33, 39]
+         +------ [28]
+         +------ [38]
+         `------ [42, 49]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 9
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [33, 39]
+         +------ [9, 28]
+         +------ [38]
+         `------ [42, 49]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 5
+Raiz original quebrou. Criando nova raiz com valor 33.
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [33]
+         +------ [9]
+         |        +------ [5]
+         |        `------ [28]
+         `------ [39]
+                  +------ [38]
+                  `------ [42, 49]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 41
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [33]
+         +------ [9]
+         |        +------ [5]
+         |        `------ [28]
+         `------ [39, 42]
+                  +------ [38]
+                  +------ [41]
+                  `------ [49]
+
+------------------------------------------------
+
+------------------------------------------------
+Inserindo o valor: 26
+SUCESSO: Valor inserido com sucesso!
+
+Estado atual da arvore:
+
+ Raiz--> [33]
+         +------ [9]
+         |        +------ [5]
+         |        `------ [26, 28]
+         `------ [39, 42]
+                  +------ [38]
+                  +------ [41]
+                  `------ [49]
+
+------------------------------------------------
+
+
+Todos os valores do vetor ALEATORIO foram inseridos!
+
+Arvore final apos insercoes com vetor ALEATORIO:
+
+ Raiz--> [33]
+         +------ [9]
+         |        +------ [5]
+         |        `------ [26, 28]
+         `------ [39, 42]
+                  +------ [38]
+                  +------ [41]
+                  `------ [49]
+

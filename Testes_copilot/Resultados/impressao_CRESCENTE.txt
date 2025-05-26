@@ -1,0 +1,22 @@
+
+
+=== TESTE DE IMPRESSAO DA ARVORE 2-3 (CRESCENTE) ===
+
+Elementos em ordem: 1 2 3 4 5 6 7 8 9 10 
+
+SUCESSO: Impressao em ordem realizada com sucesso!
+
+
+=== TESTE DE IMPRESSAO VISUAL DA ARVORE (CRESCENTE) ===
+
+ Raiz--> [4]
+         +------ [2]
+         |        +------ [1]
+         |        `------ [3]
+         `------ [6, 8]
+                  +------ [5]
+                  +------ [7]
+                  `------ [9, 10]
+
+
+SUCESSO: Impressao visual realizada com sucesso!

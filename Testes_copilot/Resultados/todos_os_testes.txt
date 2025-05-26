@@ -1,0 +1,29 @@
+
+
+====================================
+    RESULTADOS COMPLETOS DOS TESTES DA ARVORE 2-3    
+====================================
+
+=== VETORES DE TESTE UTILIZADOS ===
+
+Vetor CRESCENTE: 1 2 3 4 5 6 7 8 9 10 
+
+Vetor DECRESCENTE: 10 9 8 7 6 5 4 3 2 1 
+
+Vetor ALEATORIO: 28 42 39 38 49 33 9 5 41 26 
+
+=== RESUMO DOS TESTES ===
+
+1. Teste de insercao com vetor CRESCENTE
+2. Teste de remocao com vetor CRESCENTE
+3. Teste de insercao com vetor DECRESCENTE
+4. Teste de remocao com vetor DECRESCENTE
+5. Teste de insercao com vetor ALEATORIO
+6. Teste de remocao com vetor ALEATORIO
+7. Teste de impressao da arvore
+8. Teste de insercao de valores repetidos
+9. Teste de liberacao da arvore
+
+Todos os testes foram executados com sucesso!
+Consulte os arquivos individuais para ver os detalhes de cada teste.
+

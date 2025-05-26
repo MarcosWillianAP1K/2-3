@@ -1,0 +1,301 @@
+
+
+=== TESTE DE REMOCAO NA ARVORE 2-3 COM VETOR ALEATORIO ===
+
+Sequencia de valores para remocao: 28 42 39 38 49 33 9 5 41 26 
+
+Arvore antes das remocoes:
+
+ Raiz--> [33]
+         +------ [9]
+         |        +------ [5]
+         |        `------ [26, 28]
+         `------ [39, 42]
+                  +------ [38]
+                  +------ [41]
+                  `------ [49]
+
+
+
+------------------------------------------------
+Removendo o valor: 28
+
+
+--- Iniciando remocao de 28 ---
+Valor 28 encontrado no no [26, 28]
+Removendo 28 de um no FOLHA.
+Folha e 3-no. Remocao simples.
+--- Remocao de 28 concluida com sucesso ---
+SUCESSO: Valor removido com sucesso!
+
+Arvore apos remocao:
+
+ Raiz--> [33]
+         +------ [9]
+         |        +------ [5]
+         |        `------ [26]
+         `------ [39, 42]
+                  +------ [38]
+                  +------ [41]
+                  `------ [49]
+
+------------------------------------------------
+
+------------------------------------------------
+Removendo o valor: 42
+
+
+--- Iniciando remocao de 42 ---
+Valor 42 encontrado no no [39, 42]
+Removendo 42 de um no INTERNO. Substituindo por sucessor.
+Sucessor encontrado: 49. Substituindo 42 por 49 no no atual.
+Removendo recursivamente o sucessor 49 da subarvore apropriada...
+Valor 49 encontrado no no [49 -1]
+Removendo 49 de um no FOLHA.
+Folha e 2-no. Remocao causa UNDERFLOW.
+Underflow apos remover sucessor 49. Tratando na subarvore (pai=00B71510)...
+Tratando underflow no filho (nInfo=0, 00B71610) do pai [39, 49] (00B71510)...
+Filho em underflow e o DIREITO. Irmao esquerdo: 00B71810
+Tentando fusao com irmao esquerdo [41]
+Fundindo filho (00B71610) com irmao esquerdo [41] (00B71810)...
+Pai [3-no], filho=dir. Chave descendo: 49. Pai vira [39]
+Irmao esquerdo [41] fundido -> [41, 49]. Filhos: 00000000, 00000000, 00000000
+Ajuste pai (filho=dir): pai->dir=NULL
+Liberando no em underflow (00B71610) (anteriormente filho na pos 2 do pai)
+Fusao com irmao esquerdo concluida. No resultante [41, 49]. Status pai: OK
+--- Remocao de 42 concluida com sucesso ---
+SUCESSO: Valor removido com sucesso!
+
+Arvore apos remocao:
+
+ Raiz--> [33]
+         +------ [9]
+         |        +------ [5]
+         |        `------ [26]
+         `------ [39]
+                  +------ [38]
+                  `------ [41, 49]
+
+------------------------------------------------
+
+------------------------------------------------
+Removendo o valor: 39
+
+
+--- Iniciando remocao de 39 ---
+Valor 39 encontrado no no [39 -1]
+Removendo 39 de um no INTERNO. Substituindo por sucessor.
+Sucessor encontrado: 41. Substituindo 39 por 41 no no atual.
+Removendo recursivamente o sucessor 41 da subarvore apropriada...
+Valor 41 encontrado no no [41, 49]
+Removendo 41 de um no FOLHA.
+Folha e 3-no. Remocao simples.
+--- Remocao de 39 concluida com sucesso ---
+SUCESSO: Valor removido com sucesso!
+
+Arvore apos remocao:
+
+ Raiz--> [33]
+         +------ [9]
+         |        +------ [5]
+         |        `------ [26]
+         `------ [41]
+                  +------ [38]
+                  `------ [49]
+
+------------------------------------------------
+
+------------------------------------------------
+Removendo o valor: 38
+
+
+--- Iniciando remocao de 38 ---
+Valor 38 encontrado no no [38 -1]
+Removendo 38 de um no FOLHA.
+Folha e 2-no. Remocao causa UNDERFLOW.
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B71510)...
+Tratando underflow no filho (nInfo=0, 00B717D0) do pai [41 -1] (00B71510)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B71810
+Tentando fusao com irmao direito [49]
+Fundindo filho (00B717D0) com irmao direito [49] (00B71810)...
+Pai [2-no] entra em underflow. Chave descendo: 41
+Irmao direito [49] fundido -> [41, 49]. Filhos: 00000000, 00000000, 00000000
+Ajuste pai (filho=esq): pai->esq=00B71810, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B71810, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B717D0) (anteriormente filho na pos 0 do pai)
+Fusao com irmao direito concluida. No resultante [41, 49]. Status pai: UNDERFLOW
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B71730)...
+Tratando underflow no filho (nInfo=0, 00B71510) do pai [33 -1] (00B71730)...
+Filho em underflow e o CENTRAL. Irmao esquerdo: 00B71690, Irmao direito: 00000000
+Tentando fusao com irmao esquerdo [9]
+Fundindo filho (00B71510) com irmao esquerdo [9] (00B71690)...
+Pai [2-no] entra em underflow. Chave descendo: 33
+Irmao esquerdo [9] fundido -> [9, 33]. Filhos: 00B716D0, 00B715F0, 00B71810
+Ajuste pai (filho=cen): pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B71510) (anteriormente filho na pos 1 do pai)
+Fusao com irmao esquerdo concluida. No resultante [9, 33]. Status pai: UNDERFLOW
+Raiz (00B71730) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
+Nova raiz sera o filho esquerdo [9, 33] (00B71690) da antiga raiz.
+Liberando no da raiz antiga em underflow (00B71730).
+--- Remocao de 38 concluida com sucesso ---
+SUCESSO: Valor removido com sucesso!
+
+Arvore apos remocao:
+
+ Raiz--> [9, 33]
+         +------ [5]
+         +------ [26]
+         `------ [41, 49]
+
+------------------------------------------------
+
+------------------------------------------------
+Removendo o valor: 49
+
+
+--- Iniciando remocao de 49 ---
+Valor 49 encontrado no no [41, 49]
+Removendo 49 de um no FOLHA.
+Folha e 3-no. Remocao simples.
+--- Remocao de 49 concluida com sucesso ---
+SUCESSO: Valor removido com sucesso!
+
+Arvore apos remocao:
+
+ Raiz--> [9, 33]
+         +------ [5]
+         +------ [26]
+         `------ [41]
+
+------------------------------------------------
+
+------------------------------------------------
+Removendo o valor: 33
+
+
+--- Iniciando remocao de 33 ---
+Valor 33 encontrado no no [9, 33]
+Removendo 33 de um no INTERNO. Substituindo por sucessor.
+Sucessor encontrado: 41. Substituindo 33 por 41 no no atual.
+Removendo recursivamente o sucessor 41 da subarvore apropriada...
+Valor 41 encontrado no no [41 -1]
+Removendo 41 de um no FOLHA.
+Folha e 2-no. Remocao causa UNDERFLOW.
+Underflow apos remover sucessor 41. Tratando na subarvore (pai=00B71690)...
+Tratando underflow no filho (nInfo=0, 00B71810) do pai [9, 41] (00B71690)...
+Filho em underflow e o DIREITO. Irmao esquerdo: 00B715F0
+Tentando fusao com irmao esquerdo [26]
+Fundindo filho (00B71810) com irmao esquerdo [26] (00B715F0)...
+Pai [3-no], filho=dir. Chave descendo: 41. Pai vira [9]
+Irmao esquerdo [26] fundido -> [26, 41]. Filhos: 00000000, 00000000, 00000000
+Ajuste pai (filho=dir): pai->dir=NULL
+Liberando no em underflow (00B71810) (anteriormente filho na pos 2 do pai)
+Fusao com irmao esquerdo concluida. No resultante [26, 41]. Status pai: OK
+--- Remocao de 33 concluida com sucesso ---
+SUCESSO: Valor removido com sucesso!
+
+Arvore apos remocao:
+
+ Raiz--> [9]
+         +------ [5]
+         `------ [26, 41]
+
+------------------------------------------------
+
+------------------------------------------------
+Removendo o valor: 9
+
+
+--- Iniciando remocao de 9 ---
+Valor 9 encontrado no no [9 -1]
+Removendo 9 de um no INTERNO. Substituindo por sucessor.
+Sucessor encontrado: 26. Substituindo 9 por 26 no no atual.
+Removendo recursivamente o sucessor 26 da subarvore apropriada...
+Valor 26 encontrado no no [26, 41]
+Removendo 26 de um no FOLHA.
+Folha e 3-no. Remocao simples.
+--- Remocao de 9 concluida com sucesso ---
+SUCESSO: Valor removido com sucesso!
+
+Arvore apos remocao:
+
+ Raiz--> [26]
+         +------ [5]
+         `------ [41]
+
+------------------------------------------------
+
+------------------------------------------------
+Removendo o valor: 5
+
+
+--- Iniciando remocao de 5 ---
+Valor 5 encontrado no no [5 -1]
+Removendo 5 de um no FOLHA.
+Folha e 2-no. Remocao causa UNDERFLOW.
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B71690)...
+Tratando underflow no filho (nInfo=0, 00B716D0) do pai [26 -1] (00B71690)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B715F0
+Tentando fusao com irmao direito [41]
+Fundindo filho (00B716D0) com irmao direito [41] (00B715F0)...
+Pai [2-no] entra em underflow. Chave descendo: 26
+Irmao direito [41] fundido -> [26, 41]. Filhos: 00000000, 00000000, 00000000
+Ajuste pai (filho=esq): pai->esq=00B715F0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B715F0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B716D0) (anteriormente filho na pos 0 do pai)
+Fusao com irmao direito concluida. No resultante [26, 41]. Status pai: UNDERFLOW
+Raiz (00B71690) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
+Nova raiz sera o filho esquerdo [26, 41] (00B715F0) da antiga raiz.
+Liberando no da raiz antiga em underflow (00B71690).
+--- Remocao de 5 concluida com sucesso ---
+SUCESSO: Valor removido com sucesso!
+
+Arvore apos remocao:
+
+ Raiz--> [26, 41]
+
+------------------------------------------------
+
+------------------------------------------------
+Removendo o valor: 41
+
+
+--- Iniciando remocao de 41 ---
+Valor 41 encontrado no no [26, 41]
+Removendo 41 de um no FOLHA.
+Folha e 3-no. Remocao simples.
+--- Remocao de 41 concluida com sucesso ---
+SUCESSO: Valor removido com sucesso!
+
+Arvore apos remocao:
+
+ Raiz--> [26]
+
+------------------------------------------------
+
+------------------------------------------------
+Removendo o valor: 26
+
+
+--- Iniciando remocao de 26 ---
+Valor 26 encontrado no no [26 -1]
+Removendo 26 de um no FOLHA.
+Folha e 2-no. Remocao causa UNDERFLOW.
+Raiz (00B715F0) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
+Arvore ficou vazia apos remocao da raiz.
+Liberando no da raiz antiga em underflow (00B715F0).
+--- Remocao de 26 concluida com sucesso ---
+SUCESSO: Valor removido com sucesso!
+
+Arvore apos remocao:
+
+
+------------------------------------------------
+
+
+Todos os valores do vetor ALEATORIO foram removidos!
+
+Arvore final apos remocoes com vetor ALEATORIO:
+
+

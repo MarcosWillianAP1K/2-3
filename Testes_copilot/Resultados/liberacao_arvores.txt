@@ -1,0 +1,64 @@
+
+
+=== TESTE DE LIBERACAO DAS ARVORES 2-3 ===
+
+=== LIBERANDO ARVORE CRESCENTE ===
+
+Estado da arvore crescente antes da liberacao:
+
+ Raiz--> [4]
+         +------ [2]
+         |        +------ [1]
+         |        `------ [3]
+         `------ [6, 8]
+                  +------ [5]
+                  +------ [7]
+                  `------ [9, 10]
+
+
+Liberando a arvore crescente...
+
+SUCESSO: Arvore crescente liberada com sucesso!
+
+
+=== LIBERANDO ARVORE DECRESCENTE ===
+
+Estado da arvore decrescente antes da liberacao:
+
+ Raiz--> [7]
+         +------ [3, 5]
+         |        +------ [1, 2]
+         |        +------ [4]
+         |        `------ [6]
+         `------ [9]
+                  +------ [8]
+                  `------ [10]
+
+
+Liberando a arvore decrescente...
+
+SUCESSO: Arvore decrescente liberada com sucesso!
+
+
+=== LIBERANDO ARVORE ALEATORIA ===
+
+Estado da arvore aleatoria antes da liberacao:
+
+ Raiz--> [33]
+         +------ [9]
+         |        +------ [5]
+         |        `------ [26, 28]
+         `------ [39, 42]
+                  +------ [38]
+                  +------ [41]
+                  `------ [49]
+
+
+Liberando a arvore aleatoria...
+
+SUCESSO: Arvore aleatoria liberada com sucesso!
+
+
+=== RESULTADO FINAL DA LIBERACAO ===
+
+SUCESSO: Todas as arvores foram liberadas com sucesso!
