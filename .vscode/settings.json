@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        "2-3_funcional_por_enquanto.h": "c",
+        "escrever_resultado.h": "c"
+    }
+}
