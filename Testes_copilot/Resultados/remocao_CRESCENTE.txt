@@ -114,59 +114,59 @@ Removendo o valor: 1
 Valor 1 encontrado no no [1 -1]
 Removendo 1 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1770)...
-Tratando underflow no filho (nInfo=0, 006E1750) do pai [2 -1] (006E1770)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1850
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91770)...
+Tratando underflow no filho (nInfo=0, 00B91750) do pai [2 -1] (00B91770)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B916B0
 Tentando fusao com irmao direito [3]
-Fundindo filho (006E1750) com irmao direito [3] (006E1850)...
+Fundindo filho (00B91750) com irmao direito [3] (00B916B0)...
 Pai [2-no] entra em underflow. Chave descendo: 2
 Irmao direito [3] fundido -> [2, 3]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E1850, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E1850, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E1750) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B916B0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B916B0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91750) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [2, 3]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1590)...
-Tratando underflow no filho (nInfo=0, 006E1770) do pai [4 -1] (006E1590)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1830
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91590)...
+Tratando underflow no filho (nInfo=0, 00B91770) do pai [4 -1] (00B91590)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91850
 Tentando fusao com irmao direito [6]
-Fundindo filho (006E1770) com irmao direito [6] (006E1830)...
+Fundindo filho (00B91770) com irmao direito [6] (00B91850)...
 Pai [2-no] entra em underflow. Chave descendo: 4
-Irmao direito [6] fundido -> [4, 6]. Filhos: 006E1850, 006E1810, 006E1730
-Ajuste pai (filho=esq): pai->esq=006E1830, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E1830, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E1770) (anteriormente filho na pos 0 do pai)
+Irmao direito [6] fundido -> [4, 6]. Filhos: 00B916B0, 00B91570, 00B91790
+Ajuste pai (filho=esq): pai->esq=00B91850, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B91850, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91770) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [4, 6]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E14F0)...
-Tratando underflow no filho (nInfo=0, 006E1590) do pai [8 -1] (006E14F0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1630
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91670)...
+Tratando underflow no filho (nInfo=0, 00B91590) do pai [8 -1] (00B91670)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B917F0
 Tentando fusao com irmao direito [12]
-Fundindo filho (006E1590) com irmao direito [12] (006E1630)...
+Fundindo filho (00B91590) com irmao direito [12] (00B917F0)...
 Pai [2-no] entra em underflow. Chave descendo: 8
-Irmao direito [12] fundido -> [8, 12]. Filhos: 006E1830, 006E15B0, 006E1610
-Ajuste pai (filho=esq): pai->esq=006E1630, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E1630, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E1590) (anteriormente filho na pos 0 do pai)
+Irmao direito [12] fundido -> [8, 12]. Filhos: 00B91850, 00B91730, 00B917D0
+Ajuste pai (filho=esq): pai->esq=00B917F0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B917F0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91590) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [8, 12]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E14B0)...
-Tratando underflow no filho (nInfo=0, 006E14F0) do pai [16 -1] (006E14B0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E17F0
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B916F0)...
+Tratando underflow no filho (nInfo=0, 00B91670) do pai [16 -1] (00B916F0)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B916D0
 Tentando fusao com irmao direito [24]
-Fundindo filho (006E14F0) com irmao direito [24] (006E17F0)...
+Fundindo filho (00B91670) com irmao direito [24] (00B916D0)...
 Pai [2-no] entra em underflow. Chave descendo: 16
-Irmao direito [24] fundido -> [16, 24]. Filhos: 006E1630, 006E1530, 006E17D0
-Ajuste pai (filho=esq): pai->esq=006E17F0, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E17F0, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E14F0) (anteriormente filho na pos 0 do pai)
+Irmao direito [24] fundido -> [16, 24]. Filhos: 00B917F0, 00B91710, 00B91690
+Ajuste pai (filho=esq): pai->esq=00B916D0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B916D0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91670) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [16, 24]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E84C8)...
-Tratando underflow no filho (nInfo=0, 006E14B0) do pai [32, 64] (006E84C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E84E8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B981C8)...
+Tratando underflow no filho (nInfo=0, 00B916F0) do pai [32, 64] (00B981C8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B981A8
 Tentando fusao com irmao direito [48]
-Fundindo filho (006E14B0) com irmao direito [48] (006E84E8)...
+Fundindo filho (00B916F0) com irmao direito [48] (00B981A8)...
 Pai [3-no], filho=esq. Chave descendo: 32. Pai vira [64]
-Irmao direito [48] fundido -> [32, 48]. Filhos: 006E17F0, 006E8768, 006E8688
-Ajuste pai (filho=esq): pai->esq=006E84E8, pai->cen=006E9070, pai->dir=NULL
-Liberando no em underflow (006E14B0) (anteriormente filho na pos 0 do pai)
+Irmao direito [48] fundido -> [32, 48]. Filhos: 00B916D0, 00B98348, 00B98208
+Ajuste pai (filho=esq): pai->esq=00B981A8, pai->cen=00B98C50, pai->dir=NULL
+Liberando no em underflow (00B916F0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [32, 48]. Status pai: OK
 --- Remocao de 1 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -384,15 +384,15 @@ Removendo o valor: 3
 Valor 3 encontrado no no [3 -1]
 Removendo 3 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1830)...
-Tratando underflow no filho (nInfo=0, 006E1850) do pai [4, 6] (006E1830)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1810
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91850)...
+Tratando underflow no filho (nInfo=0, 00B916B0) do pai [4, 6] (00B91850)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91570
 Tentando fusao com irmao direito [5]
-Fundindo filho (006E1850) com irmao direito [5] (006E1810)...
+Fundindo filho (00B916B0) com irmao direito [5] (00B91570)...
 Pai [3-no], filho=esq. Chave descendo: 4. Pai vira [6]
 Irmao direito [5] fundido -> [4, 5]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E1810, pai->cen=006E1730, pai->dir=NULL
-Liberando no em underflow (006E1850) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B91570, pai->cen=00B91790, pai->dir=NULL
+Liberando no em underflow (00B916B0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [4, 5]. Status pai: OK
 --- Remocao de 3 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -608,26 +608,26 @@ Removendo o valor: 5
 Valor 5 encontrado no no [5 -1]
 Removendo 5 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1830)...
-Tratando underflow no filho (nInfo=0, 006E1810) do pai [6 -1] (006E1830)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1730
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91850)...
+Tratando underflow no filho (nInfo=0, 00B91570) do pai [6 -1] (00B91850)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91790
 Tentando fusao com irmao direito [7]
-Fundindo filho (006E1810) com irmao direito [7] (006E1730)...
+Fundindo filho (00B91570) com irmao direito [7] (00B91790)...
 Pai [2-no] entra em underflow. Chave descendo: 6
 Irmao direito [7] fundido -> [6, 7]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E1730, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E1730, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E1810) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B91790, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B91790, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91570) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [6, 7]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1630)...
-Tratando underflow no filho (nInfo=0, 006E1830) do pai [8, 12] (006E1630)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E15B0
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B917F0)...
+Tratando underflow no filho (nInfo=0, 00B91850) do pai [8, 12] (00B917F0)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91730
 Tentando fusao com irmao direito [10]
-Fundindo filho (006E1830) com irmao direito [10] (006E15B0)...
+Fundindo filho (00B91850) com irmao direito [10] (00B91730)...
 Pai [3-no], filho=esq. Chave descendo: 8. Pai vira [12]
-Irmao direito [10] fundido -> [8, 10]. Filhos: 006E1730, 006E15F0, 006E1570
-Ajuste pai (filho=esq): pai->esq=006E15B0, pai->cen=006E1610, pai->dir=NULL
-Liberando no em underflow (006E1830) (anteriormente filho na pos 0 do pai)
+Irmao direito [10] fundido -> [8, 10]. Filhos: 00B91790, 00B91490, 00B914B0
+Ajuste pai (filho=esq): pai->esq=00B91730, pai->cen=00B917D0, pai->dir=NULL
+Liberando no em underflow (00B91850) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [8, 10]. Status pai: OK
 --- Remocao de 5 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -839,15 +839,15 @@ Removendo o valor: 7
 Valor 7 encontrado no no [7 -1]
 Removendo 7 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E15B0)...
-Tratando underflow no filho (nInfo=0, 006E1730) do pai [8, 10] (006E15B0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E15F0
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91730)...
+Tratando underflow no filho (nInfo=0, 00B91790) do pai [8, 10] (00B91730)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91490
 Tentando fusao com irmao direito [9]
-Fundindo filho (006E1730) com irmao direito [9] (006E15F0)...
+Fundindo filho (00B91790) com irmao direito [9] (00B91490)...
 Pai [3-no], filho=esq. Chave descendo: 8. Pai vira [10]
 Irmao direito [9] fundido -> [8, 9]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E15F0, pai->cen=006E1570, pai->dir=NULL
-Liberando no em underflow (006E1730) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B91490, pai->cen=00B914B0, pai->dir=NULL
+Liberando no em underflow (00B91790) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [8, 9]. Status pai: OK
 --- Remocao de 7 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -1057,37 +1057,37 @@ Removendo o valor: 9
 Valor 9 encontrado no no [9 -1]
 Removendo 9 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E15B0)...
-Tratando underflow no filho (nInfo=0, 006E15F0) do pai [10 -1] (006E15B0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1570
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91730)...
+Tratando underflow no filho (nInfo=0, 00B91490) do pai [10 -1] (00B91730)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B914B0
 Tentando fusao com irmao direito [11]
-Fundindo filho (006E15F0) com irmao direito [11] (006E1570)...
+Fundindo filho (00B91490) com irmao direito [11] (00B914B0)...
 Pai [2-no] entra em underflow. Chave descendo: 10
 Irmao direito [11] fundido -> [10, 11]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E1570, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E1570, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E15F0) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B914B0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B914B0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91490) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [10, 11]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1630)...
-Tratando underflow no filho (nInfo=0, 006E15B0) do pai [12 -1] (006E1630)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1610
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B917F0)...
+Tratando underflow no filho (nInfo=0, 00B91730) do pai [12 -1] (00B917F0)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B917D0
 Tentando fusao com irmao direito [14]
-Fundindo filho (006E15B0) com irmao direito [14] (006E1610)...
+Fundindo filho (00B91730) com irmao direito [14] (00B917D0)...
 Pai [2-no] entra em underflow. Chave descendo: 12
-Irmao direito [14] fundido -> [12, 14]. Filhos: 006E1570, 006E17B0, 006E16F0
-Ajuste pai (filho=esq): pai->esq=006E1610, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E1610, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E15B0) (anteriormente filho na pos 0 do pai)
+Irmao direito [14] fundido -> [12, 14]. Filhos: 00B914B0, 00B91810, 00B917B0
+Ajuste pai (filho=esq): pai->esq=00B917D0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B917D0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91730) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [12, 14]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E17F0)...
-Tratando underflow no filho (nInfo=0, 006E1630) do pai [16, 24] (006E17F0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1530
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B916D0)...
+Tratando underflow no filho (nInfo=0, 00B917F0) do pai [16, 24] (00B916D0)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91710
 Tentando fusao com irmao direito [20]
-Fundindo filho (006E1630) com irmao direito [20] (006E1530)...
+Fundindo filho (00B917F0) com irmao direito [20] (00B91710)...
 Pai [3-no], filho=esq. Chave descendo: 16. Pai vira [24]
-Irmao direito [20] fundido -> [16, 20]. Filhos: 006E1610, 006E1650, 006E15D0
-Ajuste pai (filho=esq): pai->esq=006E1530, pai->cen=006E17D0, pai->dir=NULL
-Liberando no em underflow (006E1630) (anteriormente filho na pos 0 do pai)
+Irmao direito [20] fundido -> [16, 20]. Filhos: 00B917D0, 00B91610, 00B914F0
+Ajuste pai (filho=esq): pai->esq=00B91710, pai->cen=00B91690, pai->dir=NULL
+Liberando no em underflow (00B917F0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [16, 20]. Status pai: OK
 --- Remocao de 9 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -1291,15 +1291,15 @@ Removendo o valor: 11
 Valor 11 encontrado no no [11 -1]
 Removendo 11 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1610)...
-Tratando underflow no filho (nInfo=0, 006E1570) do pai [12, 14] (006E1610)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E17B0
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B917D0)...
+Tratando underflow no filho (nInfo=0, 00B914B0) do pai [12, 14] (00B917D0)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91810
 Tentando fusao com irmao direito [13]
-Fundindo filho (006E1570) com irmao direito [13] (006E17B0)...
+Fundindo filho (00B914B0) com irmao direito [13] (00B91810)...
 Pai [3-no], filho=esq. Chave descendo: 12. Pai vira [14]
 Irmao direito [13] fundido -> [12, 13]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E17B0, pai->cen=006E16F0, pai->dir=NULL
-Liberando no em underflow (006E1570) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B91810, pai->cen=00B917B0, pai->dir=NULL
+Liberando no em underflow (00B914B0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [12, 13]. Status pai: OK
 --- Remocao de 11 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -1501,26 +1501,26 @@ Removendo o valor: 13
 Valor 13 encontrado no no [13 -1]
 Removendo 13 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1610)...
-Tratando underflow no filho (nInfo=0, 006E17B0) do pai [14 -1] (006E1610)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E16F0
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B917D0)...
+Tratando underflow no filho (nInfo=0, 00B91810) do pai [14 -1] (00B917D0)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B917B0
 Tentando fusao com irmao direito [15]
-Fundindo filho (006E17B0) com irmao direito [15] (006E16F0)...
+Fundindo filho (00B91810) com irmao direito [15] (00B917B0)...
 Pai [2-no] entra em underflow. Chave descendo: 14
 Irmao direito [15] fundido -> [14, 15]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E16F0, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E16F0, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E17B0) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B917B0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B917B0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91810) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [14, 15]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1530)...
-Tratando underflow no filho (nInfo=0, 006E1610) do pai [16, 20] (006E1530)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1650
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91710)...
+Tratando underflow no filho (nInfo=0, 00B917D0) do pai [16, 20] (00B91710)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91610
 Tentando fusao com irmao direito [18]
-Fundindo filho (006E1610) com irmao direito [18] (006E1650)...
+Fundindo filho (00B917D0) com irmao direito [18] (00B91610)...
 Pai [3-no], filho=esq. Chave descendo: 16. Pai vira [20]
-Irmao direito [18] fundido -> [16, 18]. Filhos: 006E16F0, 006E1510, 006E1490
-Ajuste pai (filho=esq): pai->esq=006E1650, pai->cen=006E15D0, pai->dir=NULL
-Liberando no em underflow (006E1610) (anteriormente filho na pos 0 do pai)
+Irmao direito [18] fundido -> [16, 18]. Filhos: 00B917B0, 00B91830, 00B915F0
+Ajuste pai (filho=esq): pai->esq=00B91610, pai->cen=00B914F0, pai->dir=NULL
+Liberando no em underflow (00B917D0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [16, 18]. Status pai: OK
 --- Remocao de 13 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -1718,15 +1718,15 @@ Removendo o valor: 15
 Valor 15 encontrado no no [15 -1]
 Removendo 15 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1650)...
-Tratando underflow no filho (nInfo=0, 006E16F0) do pai [16, 18] (006E1650)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1510
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91610)...
+Tratando underflow no filho (nInfo=0, 00B917B0) do pai [16, 18] (00B91610)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91830
 Tentando fusao com irmao direito [17]
-Fundindo filho (006E16F0) com irmao direito [17] (006E1510)...
+Fundindo filho (00B917B0) com irmao direito [17] (00B91830)...
 Pai [3-no], filho=esq. Chave descendo: 16. Pai vira [18]
 Irmao direito [17] fundido -> [16, 17]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E1510, pai->cen=006E1490, pai->dir=NULL
-Liberando no em underflow (006E16F0) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B91830, pai->cen=00B915F0, pai->dir=NULL
+Liberando no em underflow (00B917B0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [16, 17]. Status pai: OK
 --- Remocao de 15 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -1922,48 +1922,48 @@ Removendo o valor: 17
 Valor 17 encontrado no no [17 -1]
 Removendo 17 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1650)...
-Tratando underflow no filho (nInfo=0, 006E1510) do pai [18 -1] (006E1650)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1490
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91610)...
+Tratando underflow no filho (nInfo=0, 00B91830) do pai [18 -1] (00B91610)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B915F0
 Tentando fusao com irmao direito [19]
-Fundindo filho (006E1510) com irmao direito [19] (006E1490)...
+Fundindo filho (00B91830) com irmao direito [19] (00B915F0)...
 Pai [2-no] entra em underflow. Chave descendo: 18
 Irmao direito [19] fundido -> [18, 19]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E1490, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E1490, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E1510) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B915F0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B915F0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91830) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [18, 19]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1530)...
-Tratando underflow no filho (nInfo=0, 006E1650) do pai [20 -1] (006E1530)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E15D0
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91710)...
+Tratando underflow no filho (nInfo=0, 00B91610) do pai [20 -1] (00B91710)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B914F0
 Tentando fusao com irmao direito [22]
-Fundindo filho (006E1650) com irmao direito [22] (006E15D0)...
+Fundindo filho (00B91610) com irmao direito [22] (00B914F0)...
 Pai [2-no] entra em underflow. Chave descendo: 20
-Irmao direito [22] fundido -> [20, 22]. Filhos: 006E1490, 006E1550, 006E1670
-Ajuste pai (filho=esq): pai->esq=006E15D0, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E15D0, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E1650) (anteriormente filho na pos 0 do pai)
+Irmao direito [22] fundido -> [20, 22]. Filhos: 00B915F0, 00B915D0, 00B914D0
+Ajuste pai (filho=esq): pai->esq=00B914F0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B914F0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91610) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [20, 22]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E17F0)...
-Tratando underflow no filho (nInfo=0, 006E1530) do pai [24 -1] (006E17F0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E17D0
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B916D0)...
+Tratando underflow no filho (nInfo=0, 00B91710) do pai [24 -1] (00B916D0)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91690
 Tentando fusao com irmao direito [28]
-Fundindo filho (006E1530) com irmao direito [28] (006E17D0)...
+Fundindo filho (00B91710) com irmao direito [28] (00B91690)...
 Pai [2-no] entra em underflow. Chave descendo: 24
-Irmao direito [28] fundido -> [24, 28]. Filhos: 006E15D0, 006E14D0, 006E1710
-Ajuste pai (filho=esq): pai->esq=006E17D0, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E17D0, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E1530) (anteriormente filho na pos 0 do pai)
+Irmao direito [28] fundido -> [24, 28]. Filhos: 00B914F0, 00B91630, 00B91650
+Ajuste pai (filho=esq): pai->esq=00B91690, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B91690, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91710) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [24, 28]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E84E8)...
-Tratando underflow no filho (nInfo=0, 006E17F0) do pai [32, 48] (006E84E8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8768
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B981A8)...
+Tratando underflow no filho (nInfo=0, 00B916D0) do pai [32, 48] (00B981A8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98348
 Tentando fusao com irmao direito [40]
-Fundindo filho (006E17F0) com irmao direito [40] (006E8768)...
+Fundindo filho (00B916D0) com irmao direito [40] (00B98348)...
 Pai [3-no], filho=esq. Chave descendo: 32. Pai vira [48]
-Irmao direito [40] fundido -> [32, 40]. Filhos: 006E17D0, 006E85C8, 006E8808
-Ajuste pai (filho=esq): pai->esq=006E8768, pai->cen=006E8688, pai->dir=NULL
-Liberando no em underflow (006E17F0) (anteriormente filho na pos 0 do pai)
+Irmao direito [40] fundido -> [32, 40]. Filhos: 00B91690, 00B98428, 00B98328
+Ajuste pai (filho=esq): pai->esq=00B98348, pai->cen=00B98208, pai->dir=NULL
+Liberando no em underflow (00B916D0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [32, 40]. Status pai: OK
 --- Remocao de 17 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -2151,15 +2151,15 @@ Removendo o valor: 19
 Valor 19 encontrado no no [19 -1]
 Removendo 19 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E15D0)...
-Tratando underflow no filho (nInfo=0, 006E1490) do pai [20, 22] (006E15D0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1550
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B914F0)...
+Tratando underflow no filho (nInfo=0, 00B915F0) do pai [20, 22] (00B914F0)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B915D0
 Tentando fusao com irmao direito [21]
-Fundindo filho (006E1490) com irmao direito [21] (006E1550)...
+Fundindo filho (00B915F0) com irmao direito [21] (00B915D0)...
 Pai [3-no], filho=esq. Chave descendo: 20. Pai vira [22]
 Irmao direito [21] fundido -> [20, 21]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E1550, pai->cen=006E1670, pai->dir=NULL
-Liberando no em underflow (006E1490) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B915D0, pai->cen=00B914D0, pai->dir=NULL
+Liberando no em underflow (00B915F0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [20, 21]. Status pai: OK
 --- Remocao de 19 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -2345,26 +2345,26 @@ Removendo o valor: 21
 Valor 21 encontrado no no [21 -1]
 Removendo 21 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E15D0)...
-Tratando underflow no filho (nInfo=0, 006E1550) do pai [22 -1] (006E15D0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1670
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B914F0)...
+Tratando underflow no filho (nInfo=0, 00B915D0) do pai [22 -1] (00B914F0)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B914D0
 Tentando fusao com irmao direito [23]
-Fundindo filho (006E1550) com irmao direito [23] (006E1670)...
+Fundindo filho (00B915D0) com irmao direito [23] (00B914D0)...
 Pai [2-no] entra em underflow. Chave descendo: 22
 Irmao direito [23] fundido -> [22, 23]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E1670, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E1670, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E1550) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B914D0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B914D0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B915D0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [22, 23]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E17D0)...
-Tratando underflow no filho (nInfo=0, 006E15D0) do pai [24, 28] (006E17D0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E14D0
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91690)...
+Tratando underflow no filho (nInfo=0, 00B914F0) do pai [24, 28] (00B91690)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91630
 Tentando fusao com irmao direito [26]
-Fundindo filho (006E15D0) com irmao direito [26] (006E14D0)...
+Fundindo filho (00B914F0) com irmao direito [26] (00B91630)...
 Pai [3-no], filho=esq. Chave descendo: 24. Pai vira [28]
-Irmao direito [26] fundido -> [24, 26]. Filhos: 006E1670, 006E1690, 006E1790
-Ajuste pai (filho=esq): pai->esq=006E14D0, pai->cen=006E1710, pai->dir=NULL
-Liberando no em underflow (006E15D0) (anteriormente filho na pos 0 do pai)
+Irmao direito [26] fundido -> [24, 26]. Filhos: 00B914D0, 00B91510, 00B915B0
+Ajuste pai (filho=esq): pai->esq=00B91630, pai->cen=00B91650, pai->dir=NULL
+Liberando no em underflow (00B914F0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [24, 26]. Status pai: OK
 --- Remocao de 21 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -2546,15 +2546,15 @@ Removendo o valor: 23
 Valor 23 encontrado no no [23 -1]
 Removendo 23 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E14D0)...
-Tratando underflow no filho (nInfo=0, 006E1670) do pai [24, 26] (006E14D0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1690
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91630)...
+Tratando underflow no filho (nInfo=0, 00B914D0) do pai [24, 26] (00B91630)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91510
 Tentando fusao com irmao direito [25]
-Fundindo filho (006E1670) com irmao direito [25] (006E1690)...
+Fundindo filho (00B914D0) com irmao direito [25] (00B91510)...
 Pai [3-no], filho=esq. Chave descendo: 24. Pai vira [26]
 Irmao direito [25] fundido -> [24, 25]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E1690, pai->cen=006E1790, pai->dir=NULL
-Liberando no em underflow (006E1670) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B91510, pai->cen=00B915B0, pai->dir=NULL
+Liberando no em underflow (00B914D0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [24, 25]. Status pai: OK
 --- Remocao de 23 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -2734,37 +2734,37 @@ Removendo o valor: 25
 Valor 25 encontrado no no [25 -1]
 Removendo 25 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E14D0)...
-Tratando underflow no filho (nInfo=0, 006E1690) do pai [26 -1] (006E14D0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1790
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91630)...
+Tratando underflow no filho (nInfo=0, 00B91510) do pai [26 -1] (00B91630)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B915B0
 Tentando fusao com irmao direito [27]
-Fundindo filho (006E1690) com irmao direito [27] (006E1790)...
+Fundindo filho (00B91510) com irmao direito [27] (00B915B0)...
 Pai [2-no] entra em underflow. Chave descendo: 26
 Irmao direito [27] fundido -> [26, 27]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E1790, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E1790, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E1690) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B915B0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B915B0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91510) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [26, 27]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E17D0)...
-Tratando underflow no filho (nInfo=0, 006E14D0) do pai [28 -1] (006E17D0)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E1710
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91690)...
+Tratando underflow no filho (nInfo=0, 00B91630) do pai [28 -1] (00B91690)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91650
 Tentando fusao com irmao direito [30]
-Fundindo filho (006E14D0) com irmao direito [30] (006E1710)...
+Fundindo filho (00B91630) com irmao direito [30] (00B91650)...
 Pai [2-no] entra em underflow. Chave descendo: 28
-Irmao direito [30] fundido -> [28, 30]. Filhos: 006E1790, 006E16B0, 006E16D0
-Ajuste pai (filho=esq): pai->esq=006E1710, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E1710, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E14D0) (anteriormente filho na pos 0 do pai)
+Irmao direito [30] fundido -> [28, 30]. Filhos: 00B915B0, 00B91530, 00B91550
+Ajuste pai (filho=esq): pai->esq=00B91650, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B91650, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91630) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [28, 30]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8768)...
-Tratando underflow no filho (nInfo=0, 006E17D0) do pai [32, 40] (006E8768)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E85C8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98348)...
+Tratando underflow no filho (nInfo=0, 00B91690) do pai [32, 40] (00B98348)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98428
 Tentando fusao com irmao direito [36]
-Fundindo filho (006E17D0) com irmao direito [36] (006E85C8)...
+Fundindo filho (00B91690) com irmao direito [36] (00B98428)...
 Pai [3-no], filho=esq. Chave descendo: 32. Pai vira [40]
-Irmao direito [36] fundido -> [32, 36]. Filhos: 006E1710, 006E85A8, 006E88C8
-Ajuste pai (filho=esq): pai->esq=006E85C8, pai->cen=006E8808, pai->dir=NULL
-Liberando no em underflow (006E17D0) (anteriormente filho na pos 0 do pai)
+Irmao direito [36] fundido -> [32, 36]. Filhos: 00B91650, 00B98308, 00B983C8
+Ajuste pai (filho=esq): pai->esq=00B98428, pai->cen=00B98328, pai->dir=NULL
+Liberando no em underflow (00B91690) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [32, 36]. Status pai: OK
 --- Remocao de 25 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -2938,15 +2938,15 @@ Removendo o valor: 27
 Valor 27 encontrado no no [27 -1]
 Removendo 27 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1710)...
-Tratando underflow no filho (nInfo=0, 006E1790) do pai [28, 30] (006E1710)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E16B0
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91650)...
+Tratando underflow no filho (nInfo=0, 00B915B0) do pai [28, 30] (00B91650)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91530
 Tentando fusao com irmao direito [29]
-Fundindo filho (006E1790) com irmao direito [29] (006E16B0)...
+Fundindo filho (00B915B0) com irmao direito [29] (00B91530)...
 Pai [3-no], filho=esq. Chave descendo: 28. Pai vira [30]
 Irmao direito [29] fundido -> [28, 29]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E16B0, pai->cen=006E16D0, pai->dir=NULL
-Liberando no em underflow (006E1790) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B91530, pai->cen=00B91550, pai->dir=NULL
+Liberando no em underflow (00B915B0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [28, 29]. Status pai: OK
 --- Remocao de 27 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -3118,26 +3118,26 @@ Removendo o valor: 29
 Valor 29 encontrado no no [29 -1]
 Removendo 29 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E1710)...
-Tratando underflow no filho (nInfo=0, 006E16B0) do pai [30 -1] (006E1710)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E16D0
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B91650)...
+Tratando underflow no filho (nInfo=0, 00B91530) do pai [30 -1] (00B91650)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B91550
 Tentando fusao com irmao direito [31]
-Fundindo filho (006E16B0) com irmao direito [31] (006E16D0)...
+Fundindo filho (00B91530) com irmao direito [31] (00B91550)...
 Pai [2-no] entra em underflow. Chave descendo: 30
 Irmao direito [31] fundido -> [30, 31]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E16D0, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E16D0, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E16B0) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B91550, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B91550, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B91530) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [30, 31]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E85C8)...
-Tratando underflow no filho (nInfo=0, 006E1710) do pai [32, 36] (006E85C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E85A8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98428)...
+Tratando underflow no filho (nInfo=0, 00B91650) do pai [32, 36] (00B98428)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98308
 Tentando fusao com irmao direito [34]
-Fundindo filho (006E1710) com irmao direito [34] (006E85A8)...
+Fundindo filho (00B91650) com irmao direito [34] (00B98308)...
 Pai [3-no], filho=esq. Chave descendo: 32. Pai vira [36]
-Irmao direito [34] fundido -> [32, 34]. Filhos: 006E16D0, 006E8708, 006E8728
-Ajuste pai (filho=esq): pai->esq=006E85A8, pai->cen=006E88C8, pai->dir=NULL
-Liberando no em underflow (006E1710) (anteriormente filho na pos 0 do pai)
+Irmao direito [34] fundido -> [32, 34]. Filhos: 00B91550, 00B98468, 00B98508
+Ajuste pai (filho=esq): pai->esq=00B98308, pai->cen=00B983C8, pai->dir=NULL
+Liberando no em underflow (00B91650) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [32, 34]. Status pai: OK
 --- Remocao de 29 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -3305,15 +3305,15 @@ Removendo o valor: 31
 Valor 31 encontrado no no [31 -1]
 Removendo 31 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E85A8)...
-Tratando underflow no filho (nInfo=0, 006E16D0) do pai [32, 34] (006E85A8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8708
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98308)...
+Tratando underflow no filho (nInfo=0, 00B91550) do pai [32, 34] (00B98308)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98468
 Tentando fusao com irmao direito [33]
-Fundindo filho (006E16D0) com irmao direito [33] (006E8708)...
+Fundindo filho (00B91550) com irmao direito [33] (00B98468)...
 Pai [3-no], filho=esq. Chave descendo: 32. Pai vira [34]
 Irmao direito [33] fundido -> [32, 33]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8708, pai->cen=006E8728, pai->dir=NULL
-Liberando no em underflow (006E16D0) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98468, pai->cen=00B98508, pai->dir=NULL
+Liberando no em underflow (00B91550) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [32, 33]. Status pai: OK
 --- Remocao de 31 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -3479,64 +3479,64 @@ Removendo o valor: 33
 Valor 33 encontrado no no [33 -1]
 Removendo 33 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E85A8)...
-Tratando underflow no filho (nInfo=0, 006E8708) do pai [34 -1] (006E85A8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8728
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98308)...
+Tratando underflow no filho (nInfo=0, 00B98468) do pai [34 -1] (00B98308)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98508
 Tentando fusao com irmao direito [35]
-Fundindo filho (006E8708) com irmao direito [35] (006E8728)...
+Fundindo filho (00B98468) com irmao direito [35] (00B98508)...
 Pai [2-no] entra em underflow. Chave descendo: 34
 Irmao direito [35] fundido -> [34, 35]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8728, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8728, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8708) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98508, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98508, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98468) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [34, 35]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E85C8)...
-Tratando underflow no filho (nInfo=0, 006E85A8) do pai [36 -1] (006E85C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E88C8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98428)...
+Tratando underflow no filho (nInfo=0, 00B98308) do pai [36 -1] (00B98428)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B983C8
 Tentando fusao com irmao direito [38]
-Fundindo filho (006E85A8) com irmao direito [38] (006E88C8)...
+Fundindo filho (00B98308) com irmao direito [38] (00B983C8)...
 Pai [2-no] entra em underflow. Chave descendo: 36
-Irmao direito [38] fundido -> [36, 38]. Filhos: 006E8728, 006E8548, 006E8588
-Ajuste pai (filho=esq): pai->esq=006E88C8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E88C8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E85A8) (anteriormente filho na pos 0 do pai)
+Irmao direito [38] fundido -> [36, 38]. Filhos: 00B98508, 00B98388, 00B98288
+Ajuste pai (filho=esq): pai->esq=00B983C8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B983C8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98308) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [36, 38]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8768)...
-Tratando underflow no filho (nInfo=0, 006E85C8) do pai [40 -1] (006E8768)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8808
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98348)...
+Tratando underflow no filho (nInfo=0, 00B98428) do pai [40 -1] (00B98348)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98328
 Tentando fusao com irmao direito [44]
-Fundindo filho (006E85C8) com irmao direito [44] (006E8808)...
+Fundindo filho (00B98428) com irmao direito [44] (00B98328)...
 Pai [2-no] entra em underflow. Chave descendo: 40
-Irmao direito [44] fundido -> [40, 44]. Filhos: 006E88C8, 006E87C8, 006E86E8
-Ajuste pai (filho=esq): pai->esq=006E8808, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8808, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E85C8) (anteriormente filho na pos 0 do pai)
+Irmao direito [44] fundido -> [40, 44]. Filhos: 00B983C8, 00B983A8, 00B984E8
+Ajuste pai (filho=esq): pai->esq=00B98328, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98328, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98428) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [40, 44]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E84E8)...
-Tratando underflow no filho (nInfo=0, 006E8768) do pai [48 -1] (006E84E8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8688
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B981A8)...
+Tratando underflow no filho (nInfo=0, 00B98348) do pai [48 -1] (00B981A8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98208
 Tentando fusao com irmao direito [56]
-Fundindo filho (006E8768) com irmao direito [56] (006E8688)...
+Fundindo filho (00B98348) com irmao direito [56] (00B98208)...
 Pai [2-no] entra em underflow. Chave descendo: 48
-Irmao direito [56] fundido -> [48, 56]. Filhos: 006E8808, 006E8868, 006E8648
-Ajuste pai (filho=esq): pai->esq=006E8688, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8688, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8768) (anteriormente filho na pos 0 do pai)
+Irmao direito [56] fundido -> [48, 56]. Filhos: 00B98328, 00B981E8, 00B98168
+Ajuste pai (filho=esq): pai->esq=00B98208, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98208, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98348) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [48, 56]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E84C8)...
-Tratando underflow no filho (nInfo=0, 006E84E8) do pai [64 -1] (006E84C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E9070
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B981C8)...
+Tratando underflow no filho (nInfo=0, 00B981A8) do pai [64 -1] (00B981C8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98C50
 Tentando fusao com irmao direito [80]
-Fundindo filho (006E84E8) com irmao direito [80] (006E9070)...
+Fundindo filho (00B981A8) com irmao direito [80] (00B98C50)...
 Pai [2-no] entra em underflow. Chave descendo: 64
-Irmao direito [80] fundido -> [64, 80]. Filhos: 006E8688, 006E8408, 006E84A8
-Ajuste pai (filho=esq): pai->esq=006E9070, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E9070, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E84E8) (anteriormente filho na pos 0 do pai)
+Irmao direito [80] fundido -> [64, 80]. Filhos: 00B98208, 00B98568, 00B98888
+Ajuste pai (filho=esq): pai->esq=00B98C50, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98C50, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B981A8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [64, 80]. Status pai: UNDERFLOW
-Raiz (006E84C8) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
-Nova raiz sera o filho esquerdo [64, 80] (006E9070) da antiga raiz.
-Liberando no da raiz antiga em underflow (006E84C8).
+Raiz (00B981C8) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
+Nova raiz sera o filho esquerdo [64, 80] (00B98C50) da antiga raiz.
+Liberando no da raiz antiga em underflow (00B981C8).
 --- Remocao de 33 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
 
@@ -3689,15 +3689,15 @@ Removendo o valor: 35
 Valor 35 encontrado no no [35 -1]
 Removendo 35 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E88C8)...
-Tratando underflow no filho (nInfo=0, 006E8728) do pai [36, 38] (006E88C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8548
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B983C8)...
+Tratando underflow no filho (nInfo=0, 00B98508) do pai [36, 38] (00B983C8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98388
 Tentando fusao com irmao direito [37]
-Fundindo filho (006E8728) com irmao direito [37] (006E8548)...
+Fundindo filho (00B98508) com irmao direito [37] (00B98388)...
 Pai [3-no], filho=esq. Chave descendo: 36. Pai vira [38]
 Irmao direito [37] fundido -> [36, 37]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8548, pai->cen=006E8588, pai->dir=NULL
-Liberando no em underflow (006E8728) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98388, pai->cen=00B98288, pai->dir=NULL
+Liberando no em underflow (00B98508) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [36, 37]. Status pai: OK
 --- Remocao de 35 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -3849,26 +3849,26 @@ Removendo o valor: 37
 Valor 37 encontrado no no [37 -1]
 Removendo 37 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E88C8)...
-Tratando underflow no filho (nInfo=0, 006E8548) do pai [38 -1] (006E88C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8588
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B983C8)...
+Tratando underflow no filho (nInfo=0, 00B98388) do pai [38 -1] (00B983C8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98288
 Tentando fusao com irmao direito [39]
-Fundindo filho (006E8548) com irmao direito [39] (006E8588)...
+Fundindo filho (00B98388) com irmao direito [39] (00B98288)...
 Pai [2-no] entra em underflow. Chave descendo: 38
 Irmao direito [39] fundido -> [38, 39]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8588, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8588, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8548) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98288, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98288, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98388) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [38, 39]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8808)...
-Tratando underflow no filho (nInfo=0, 006E88C8) do pai [40, 44] (006E8808)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E87C8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98328)...
+Tratando underflow no filho (nInfo=0, 00B983C8) do pai [40, 44] (00B98328)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B983A8
 Tentando fusao com irmao direito [42]
-Fundindo filho (006E88C8) com irmao direito [42] (006E87C8)...
+Fundindo filho (00B983C8) com irmao direito [42] (00B983A8)...
 Pai [3-no], filho=esq. Chave descendo: 40. Pai vira [44]
-Irmao direito [42] fundido -> [40, 42]. Filhos: 006E8588, 006E8568, 006E8748
-Ajuste pai (filho=esq): pai->esq=006E87C8, pai->cen=006E86E8, pai->dir=NULL
-Liberando no em underflow (006E88C8) (anteriormente filho na pos 0 do pai)
+Irmao direito [42] fundido -> [40, 42]. Filhos: 00B98288, 00B98268, 00B98228
+Ajuste pai (filho=esq): pai->esq=00B983A8, pai->cen=00B984E8, pai->dir=NULL
+Liberando no em underflow (00B983C8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [40, 42]. Status pai: OK
 --- Remocao de 37 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -4016,15 +4016,15 @@ Removendo o valor: 39
 Valor 39 encontrado no no [39 -1]
 Removendo 39 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E87C8)...
-Tratando underflow no filho (nInfo=0, 006E8588) do pai [40, 42] (006E87C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8568
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B983A8)...
+Tratando underflow no filho (nInfo=0, 00B98288) do pai [40, 42] (00B983A8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98268
 Tentando fusao com irmao direito [41]
-Fundindo filho (006E8588) com irmao direito [41] (006E8568)...
+Fundindo filho (00B98288) com irmao direito [41] (00B98268)...
 Pai [3-no], filho=esq. Chave descendo: 40. Pai vira [42]
 Irmao direito [41] fundido -> [40, 41]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8568, pai->cen=006E8748, pai->dir=NULL
-Liberando no em underflow (006E8588) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98268, pai->cen=00B98228, pai->dir=NULL
+Liberando no em underflow (00B98288) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [40, 41]. Status pai: OK
 --- Remocao de 39 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -4170,37 +4170,37 @@ Removendo o valor: 41
 Valor 41 encontrado no no [41 -1]
 Removendo 41 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E87C8)...
-Tratando underflow no filho (nInfo=0, 006E8568) do pai [42 -1] (006E87C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8748
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B983A8)...
+Tratando underflow no filho (nInfo=0, 00B98268) do pai [42 -1] (00B983A8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98228
 Tentando fusao com irmao direito [43]
-Fundindo filho (006E8568) com irmao direito [43] (006E8748)...
+Fundindo filho (00B98268) com irmao direito [43] (00B98228)...
 Pai [2-no] entra em underflow. Chave descendo: 42
 Irmao direito [43] fundido -> [42, 43]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8748, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8748, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8568) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98228, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98228, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98268) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [42, 43]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8808)...
-Tratando underflow no filho (nInfo=0, 006E87C8) do pai [44 -1] (006E8808)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E86E8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98328)...
+Tratando underflow no filho (nInfo=0, 00B983A8) do pai [44 -1] (00B98328)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B984E8
 Tentando fusao com irmao direito [46]
-Fundindo filho (006E87C8) com irmao direito [46] (006E86E8)...
+Fundindo filho (00B983A8) com irmao direito [46] (00B984E8)...
 Pai [2-no] entra em underflow. Chave descendo: 44
-Irmao direito [46] fundido -> [44, 46]. Filhos: 006E8748, 006E8828, 006E87E8
-Ajuste pai (filho=esq): pai->esq=006E86E8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E86E8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E87C8) (anteriormente filho na pos 0 do pai)
+Irmao direito [46] fundido -> [44, 46]. Filhos: 00B98228, 00B982E8, 00B984C8
+Ajuste pai (filho=esq): pai->esq=00B984E8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B984E8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B983A8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [44, 46]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8688)...
-Tratando underflow no filho (nInfo=0, 006E8808) do pai [48, 56] (006E8688)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8868
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98208)...
+Tratando underflow no filho (nInfo=0, 00B98328) do pai [48, 56] (00B98208)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B981E8
 Tentando fusao com irmao direito [52]
-Fundindo filho (006E8808) com irmao direito [52] (006E8868)...
+Fundindo filho (00B98328) com irmao direito [52] (00B981E8)...
 Pai [3-no], filho=esq. Chave descendo: 48. Pai vira [56]
-Irmao direito [52] fundido -> [48, 52]. Filhos: 006E86E8, 006E85E8, 006E86A8
-Ajuste pai (filho=esq): pai->esq=006E8868, pai->cen=006E8648, pai->dir=NULL
-Liberando no em underflow (006E8808) (anteriormente filho na pos 0 do pai)
+Irmao direito [52] fundido -> [48, 52]. Filhos: 00B984E8, 00B982A8, 00B982C8
+Ajuste pai (filho=esq): pai->esq=00B981E8, pai->cen=00B98168, pai->dir=NULL
+Liberando no em underflow (00B98328) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [48, 52]. Status pai: OK
 --- Remocao de 41 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -4340,15 +4340,15 @@ Removendo o valor: 43
 Valor 43 encontrado no no [43 -1]
 Removendo 43 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E86E8)...
-Tratando underflow no filho (nInfo=0, 006E8748) do pai [44, 46] (006E86E8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8828
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B984E8)...
+Tratando underflow no filho (nInfo=0, 00B98228) do pai [44, 46] (00B984E8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B982E8
 Tentando fusao com irmao direito [45]
-Fundindo filho (006E8748) com irmao direito [45] (006E8828)...
+Fundindo filho (00B98228) com irmao direito [45] (00B982E8)...
 Pai [3-no], filho=esq. Chave descendo: 44. Pai vira [46]
 Irmao direito [45] fundido -> [44, 45]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8828, pai->cen=006E87E8, pai->dir=NULL
-Liberando no em underflow (006E8748) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B982E8, pai->cen=00B984C8, pai->dir=NULL
+Liberando no em underflow (00B98228) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [44, 45]. Status pai: OK
 --- Remocao de 43 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -4486,26 +4486,26 @@ Removendo o valor: 45
 Valor 45 encontrado no no [45 -1]
 Removendo 45 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E86E8)...
-Tratando underflow no filho (nInfo=0, 006E8828) do pai [46 -1] (006E86E8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E87E8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B984E8)...
+Tratando underflow no filho (nInfo=0, 00B982E8) do pai [46 -1] (00B984E8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B984C8
 Tentando fusao com irmao direito [47]
-Fundindo filho (006E8828) com irmao direito [47] (006E87E8)...
+Fundindo filho (00B982E8) com irmao direito [47] (00B984C8)...
 Pai [2-no] entra em underflow. Chave descendo: 46
 Irmao direito [47] fundido -> [46, 47]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E87E8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E87E8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8828) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B984C8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B984C8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B982E8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [46, 47]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8868)...
-Tratando underflow no filho (nInfo=0, 006E86E8) do pai [48, 52] (006E8868)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E85E8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B981E8)...
+Tratando underflow no filho (nInfo=0, 00B984E8) do pai [48, 52] (00B981E8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B982A8
 Tentando fusao com irmao direito [50]
-Fundindo filho (006E86E8) com irmao direito [50] (006E85E8)...
+Fundindo filho (00B984E8) com irmao direito [50] (00B982A8)...
 Pai [3-no], filho=esq. Chave descendo: 48. Pai vira [52]
-Irmao direito [50] fundido -> [48, 50]. Filhos: 006E87E8, 006E8788, 006E8608
-Ajuste pai (filho=esq): pai->esq=006E85E8, pai->cen=006E86A8, pai->dir=NULL
-Liberando no em underflow (006E86E8) (anteriormente filho na pos 0 do pai)
+Irmao direito [50] fundido -> [48, 50]. Filhos: 00B984C8, 00B98128, 00B98148
+Ajuste pai (filho=esq): pai->esq=00B982A8, pai->cen=00B982C8, pai->dir=NULL
+Liberando no em underflow (00B984E8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [48, 50]. Status pai: OK
 --- Remocao de 45 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -4639,15 +4639,15 @@ Removendo o valor: 47
 Valor 47 encontrado no no [47 -1]
 Removendo 47 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E85E8)...
-Tratando underflow no filho (nInfo=0, 006E87E8) do pai [48, 50] (006E85E8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8788
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B982A8)...
+Tratando underflow no filho (nInfo=0, 00B984C8) do pai [48, 50] (00B982A8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98128
 Tentando fusao com irmao direito [49]
-Fundindo filho (006E87E8) com irmao direito [49] (006E8788)...
+Fundindo filho (00B984C8) com irmao direito [49] (00B98128)...
 Pai [3-no], filho=esq. Chave descendo: 48. Pai vira [50]
 Irmao direito [49] fundido -> [48, 49]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8788, pai->cen=006E8608, pai->dir=NULL
-Liberando no em underflow (006E87E8) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98128, pai->cen=00B98148, pai->dir=NULL
+Liberando no em underflow (00B984C8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [48, 49]. Status pai: OK
 --- Remocao de 47 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -4779,48 +4779,48 @@ Removendo o valor: 49
 Valor 49 encontrado no no [49 -1]
 Removendo 49 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E85E8)...
-Tratando underflow no filho (nInfo=0, 006E8788) do pai [50 -1] (006E85E8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8608
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B982A8)...
+Tratando underflow no filho (nInfo=0, 00B98128) do pai [50 -1] (00B982A8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98148
 Tentando fusao com irmao direito [51]
-Fundindo filho (006E8788) com irmao direito [51] (006E8608)...
+Fundindo filho (00B98128) com irmao direito [51] (00B98148)...
 Pai [2-no] entra em underflow. Chave descendo: 50
 Irmao direito [51] fundido -> [50, 51]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8608, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8608, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8788) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98148, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98148, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98128) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [50, 51]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8868)...
-Tratando underflow no filho (nInfo=0, 006E85E8) do pai [52 -1] (006E8868)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E86A8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B981E8)...
+Tratando underflow no filho (nInfo=0, 00B982A8) do pai [52 -1] (00B981E8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B982C8
 Tentando fusao com irmao direito [54]
-Fundindo filho (006E85E8) com irmao direito [54] (006E86A8)...
+Fundindo filho (00B982A8) com irmao direito [54] (00B982C8)...
 Pai [2-no] entra em underflow. Chave descendo: 52
-Irmao direito [54] fundido -> [52, 54]. Filhos: 006E8608, 006E8848, 006E8628
-Ajuste pai (filho=esq): pai->esq=006E86A8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E86A8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E85E8) (anteriormente filho na pos 0 do pai)
+Irmao direito [54] fundido -> [52, 54]. Filhos: 00B98148, 00B98248, 00B98368
+Ajuste pai (filho=esq): pai->esq=00B982C8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B982C8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B982A8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [52, 54]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8688)...
-Tratando underflow no filho (nInfo=0, 006E8868) do pai [56 -1] (006E8688)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8648
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98208)...
+Tratando underflow no filho (nInfo=0, 00B981E8) do pai [56 -1] (00B98208)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98168
 Tentando fusao com irmao direito [60]
-Fundindo filho (006E8868) com irmao direito [60] (006E8648)...
+Fundindo filho (00B981E8) com irmao direito [60] (00B98168)...
 Pai [2-no] entra em underflow. Chave descendo: 56
-Irmao direito [60] fundido -> [56, 60]. Filhos: 006E86A8, 006E8888, 006E8528
-Ajuste pai (filho=esq): pai->esq=006E8648, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8648, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8868) (anteriormente filho na pos 0 do pai)
+Irmao direito [60] fundido -> [56, 60]. Filhos: 00B982C8, 00B98448, 00B98188
+Ajuste pai (filho=esq): pai->esq=00B98168, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98168, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B981E8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [56, 60]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E9070)...
-Tratando underflow no filho (nInfo=0, 006E8688) do pai [64, 80] (006E9070)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8408
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98C50)...
+Tratando underflow no filho (nInfo=0, 00B98208) do pai [64, 80] (00B98C50)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98568
 Tentando fusao com irmao direito [72]
-Fundindo filho (006E8688) com irmao direito [72] (006E8408)...
+Fundindo filho (00B98208) com irmao direito [72] (00B98568)...
 Pai [3-no], filho=esq. Chave descendo: 64. Pai vira [80]
-Irmao direito [72] fundido -> [64, 72]. Filhos: 006E8648, 006E8228, 006E83E8
-Ajuste pai (filho=esq): pai->esq=006E8408, pai->cen=006E84A8, pai->dir=NULL
-Liberando no em underflow (006E8688) (anteriormente filho na pos 0 do pai)
+Irmao direito [72] fundido -> [64, 72]. Filhos: 00B98168, 00B98768, 00B988C8
+Ajuste pai (filho=esq): pai->esq=00B98568, pai->cen=00B98888, pai->dir=NULL
+Liberando no em underflow (00B98208) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [64, 72]. Status pai: OK
 --- Remocao de 49 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -4944,15 +4944,15 @@ Removendo o valor: 51
 Valor 51 encontrado no no [51 -1]
 Removendo 51 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E86A8)...
-Tratando underflow no filho (nInfo=0, 006E8608) do pai [52, 54] (006E86A8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8848
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B982C8)...
+Tratando underflow no filho (nInfo=0, 00B98148) do pai [52, 54] (00B982C8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98248
 Tentando fusao com irmao direito [53]
-Fundindo filho (006E8608) com irmao direito [53] (006E8848)...
+Fundindo filho (00B98148) com irmao direito [53] (00B98248)...
 Pai [3-no], filho=esq. Chave descendo: 52. Pai vira [54]
 Irmao direito [53] fundido -> [52, 53]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8848, pai->cen=006E8628, pai->dir=NULL
-Liberando no em underflow (006E8608) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98248, pai->cen=00B98368, pai->dir=NULL
+Liberando no em underflow (00B98148) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [52, 53]. Status pai: OK
 --- Remocao de 51 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -5074,26 +5074,26 @@ Removendo o valor: 53
 Valor 53 encontrado no no [53 -1]
 Removendo 53 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E86A8)...
-Tratando underflow no filho (nInfo=0, 006E8848) do pai [54 -1] (006E86A8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8628
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B982C8)...
+Tratando underflow no filho (nInfo=0, 00B98248) do pai [54 -1] (00B982C8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98368
 Tentando fusao com irmao direito [55]
-Fundindo filho (006E8848) com irmao direito [55] (006E8628)...
+Fundindo filho (00B98248) com irmao direito [55] (00B98368)...
 Pai [2-no] entra em underflow. Chave descendo: 54
 Irmao direito [55] fundido -> [54, 55]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8628, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8628, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8848) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98368, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98368, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98248) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [54, 55]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8648)...
-Tratando underflow no filho (nInfo=0, 006E86A8) do pai [56, 60] (006E8648)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8888
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98168)...
+Tratando underflow no filho (nInfo=0, 00B982C8) do pai [56, 60] (00B98168)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98448
 Tentando fusao com irmao direito [58]
-Fundindo filho (006E86A8) com irmao direito [58] (006E8888)...
+Fundindo filho (00B982C8) com irmao direito [58] (00B98448)...
 Pai [3-no], filho=esq. Chave descendo: 56. Pai vira [60]
-Irmao direito [58] fundido -> [56, 58]. Filhos: 006E8628, 006E86C8, 006E87A8
-Ajuste pai (filho=esq): pai->esq=006E8888, pai->cen=006E8528, pai->dir=NULL
-Liberando no em underflow (006E86A8) (anteriormente filho na pos 0 do pai)
+Irmao direito [58] fundido -> [56, 58]. Filhos: 00B98368, 00B983E8, 00B98408
+Ajuste pai (filho=esq): pai->esq=00B98448, pai->cen=00B98188, pai->dir=NULL
+Liberando no em underflow (00B982C8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [56, 58]. Status pai: OK
 --- Remocao de 53 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -5211,15 +5211,15 @@ Removendo o valor: 55
 Valor 55 encontrado no no [55 -1]
 Removendo 55 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8888)...
-Tratando underflow no filho (nInfo=0, 006E8628) do pai [56, 58] (006E8888)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E86C8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98448)...
+Tratando underflow no filho (nInfo=0, 00B98368) do pai [56, 58] (00B98448)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B983E8
 Tentando fusao com irmao direito [57]
-Fundindo filho (006E8628) com irmao direito [57] (006E86C8)...
+Fundindo filho (00B98368) com irmao direito [57] (00B983E8)...
 Pai [3-no], filho=esq. Chave descendo: 56. Pai vira [58]
 Irmao direito [57] fundido -> [56, 57]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E86C8, pai->cen=006E87A8, pai->dir=NULL
-Liberando no em underflow (006E8628) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B983E8, pai->cen=00B98408, pai->dir=NULL
+Liberando no em underflow (00B98368) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [56, 57]. Status pai: OK
 --- Remocao de 55 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -5335,37 +5335,37 @@ Removendo o valor: 57
 Valor 57 encontrado no no [57 -1]
 Removendo 57 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8888)...
-Tratando underflow no filho (nInfo=0, 006E86C8) do pai [58 -1] (006E8888)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E87A8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98448)...
+Tratando underflow no filho (nInfo=0, 00B983E8) do pai [58 -1] (00B98448)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98408
 Tentando fusao com irmao direito [59]
-Fundindo filho (006E86C8) com irmao direito [59] (006E87A8)...
+Fundindo filho (00B983E8) com irmao direito [59] (00B98408)...
 Pai [2-no] entra em underflow. Chave descendo: 58
 Irmao direito [59] fundido -> [58, 59]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E87A8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E87A8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E86C8) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98408, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98408, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B983E8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [58, 59]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8648)...
-Tratando underflow no filho (nInfo=0, 006E8888) do pai [60 -1] (006E8648)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8528
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98168)...
+Tratando underflow no filho (nInfo=0, 00B98448) do pai [60 -1] (00B98168)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98188
 Tentando fusao com irmao direito [62]
-Fundindo filho (006E8888) com irmao direito [62] (006E8528)...
+Fundindo filho (00B98448) com irmao direito [62] (00B98188)...
 Pai [2-no] entra em underflow. Chave descendo: 60
-Irmao direito [62] fundido -> [60, 62]. Filhos: 006E87A8, 006E88A8, 006E8668
-Ajuste pai (filho=esq): pai->esq=006E8528, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8528, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8888) (anteriormente filho na pos 0 do pai)
+Irmao direito [62] fundido -> [60, 62]. Filhos: 00B98408, 00B98488, 00B984A8
+Ajuste pai (filho=esq): pai->esq=00B98188, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98188, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98448) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [60, 62]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8408)...
-Tratando underflow no filho (nInfo=0, 006E8648) do pai [64, 72] (006E8408)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8228
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98568)...
+Tratando underflow no filho (nInfo=0, 00B98168) do pai [64, 72] (00B98568)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98768
 Tentando fusao com irmao direito [68]
-Fundindo filho (006E8648) com irmao direito [68] (006E8228)...
+Fundindo filho (00B98168) com irmao direito [68] (00B98768)...
 Pai [3-no], filho=esq. Chave descendo: 64. Pai vira [72]
-Irmao direito [68] fundido -> [64, 68]. Filhos: 006E8528, 006E8508, 006E8188
-Ajuste pai (filho=esq): pai->esq=006E8228, pai->cen=006E83E8, pai->dir=NULL
-Liberando no em underflow (006E8648) (anteriormente filho na pos 0 do pai)
+Irmao direito [68] fundido -> [64, 68]. Filhos: 00B98188, 00B98628, 00B98868
+Ajuste pai (filho=esq): pai->esq=00B98768, pai->cen=00B988C8, pai->dir=NULL
+Liberando no em underflow (00B98168) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [64, 68]. Status pai: OK
 --- Remocao de 57 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -5475,15 +5475,15 @@ Removendo o valor: 59
 Valor 59 encontrado no no [59 -1]
 Removendo 59 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8528)...
-Tratando underflow no filho (nInfo=0, 006E87A8) do pai [60, 62] (006E8528)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E88A8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98188)...
+Tratando underflow no filho (nInfo=0, 00B98408) do pai [60, 62] (00B98188)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98488
 Tentando fusao com irmao direito [61]
-Fundindo filho (006E87A8) com irmao direito [61] (006E88A8)...
+Fundindo filho (00B98408) com irmao direito [61] (00B98488)...
 Pai [3-no], filho=esq. Chave descendo: 60. Pai vira [62]
 Irmao direito [61] fundido -> [60, 61]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E88A8, pai->cen=006E8668, pai->dir=NULL
-Liberando no em underflow (006E87A8) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98488, pai->cen=00B984A8, pai->dir=NULL
+Liberando no em underflow (00B98408) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [60, 61]. Status pai: OK
 --- Remocao de 59 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -5591,26 +5591,26 @@ Removendo o valor: 61
 Valor 61 encontrado no no [61 -1]
 Removendo 61 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8528)...
-Tratando underflow no filho (nInfo=0, 006E88A8) do pai [62 -1] (006E8528)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8668
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98188)...
+Tratando underflow no filho (nInfo=0, 00B98488) do pai [62 -1] (00B98188)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B984A8
 Tentando fusao com irmao direito [63]
-Fundindo filho (006E88A8) com irmao direito [63] (006E8668)...
+Fundindo filho (00B98488) com irmao direito [63] (00B984A8)...
 Pai [2-no] entra em underflow. Chave descendo: 62
 Irmao direito [63] fundido -> [62, 63]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8668, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8668, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E88A8) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B984A8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B984A8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98488) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [62, 63]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8228)...
-Tratando underflow no filho (nInfo=0, 006E8528) do pai [64, 68] (006E8228)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8508
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98768)...
+Tratando underflow no filho (nInfo=0, 00B98188) do pai [64, 68] (00B98768)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98628
 Tentando fusao com irmao direito [66]
-Fundindo filho (006E8528) com irmao direito [66] (006E8508)...
+Fundindo filho (00B98188) com irmao direito [66] (00B98628)...
 Pai [3-no], filho=esq. Chave descendo: 64. Pai vira [68]
-Irmao direito [66] fundido -> [64, 66]. Filhos: 006E8668, 006E81E8, 006E8308
-Ajuste pai (filho=esq): pai->esq=006E8508, pai->cen=006E8188, pai->dir=NULL
-Liberando no em underflow (006E8528) (anteriormente filho na pos 0 do pai)
+Irmao direito [66] fundido -> [64, 66]. Filhos: 00B984A8, 00B98708, 00B985A8
+Ajuste pai (filho=esq): pai->esq=00B98628, pai->cen=00B98868, pai->dir=NULL
+Liberando no em underflow (00B98188) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [64, 66]. Status pai: OK
 --- Remocao de 61 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -5714,15 +5714,15 @@ Removendo o valor: 63
 Valor 63 encontrado no no [63 -1]
 Removendo 63 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8508)...
-Tratando underflow no filho (nInfo=0, 006E8668) do pai [64, 66] (006E8508)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E81E8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98628)...
+Tratando underflow no filho (nInfo=0, 00B984A8) do pai [64, 66] (00B98628)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98708
 Tentando fusao com irmao direito [65]
-Fundindo filho (006E8668) com irmao direito [65] (006E81E8)...
+Fundindo filho (00B984A8) com irmao direito [65] (00B98708)...
 Pai [3-no], filho=esq. Chave descendo: 64. Pai vira [66]
 Irmao direito [65] fundido -> [64, 65]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E81E8, pai->cen=006E8308, pai->dir=NULL
-Liberando no em underflow (006E8668) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98708, pai->cen=00B985A8, pai->dir=NULL
+Liberando no em underflow (00B984A8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [64, 65]. Status pai: OK
 --- Remocao de 63 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -5824,53 +5824,53 @@ Removendo o valor: 65
 Valor 65 encontrado no no [65 -1]
 Removendo 65 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8508)...
-Tratando underflow no filho (nInfo=0, 006E81E8) do pai [66 -1] (006E8508)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8308
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98628)...
+Tratando underflow no filho (nInfo=0, 00B98708) do pai [66 -1] (00B98628)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B985A8
 Tentando fusao com irmao direito [67]
-Fundindo filho (006E81E8) com irmao direito [67] (006E8308)...
+Fundindo filho (00B98708) com irmao direito [67] (00B985A8)...
 Pai [2-no] entra em underflow. Chave descendo: 66
 Irmao direito [67] fundido -> [66, 67]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8308, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8308, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E81E8) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B985A8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B985A8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98708) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [66, 67]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8228)...
-Tratando underflow no filho (nInfo=0, 006E8508) do pai [68 -1] (006E8228)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8188
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98768)...
+Tratando underflow no filho (nInfo=0, 00B98628) do pai [68 -1] (00B98768)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98868
 Tentando fusao com irmao direito [70]
-Fundindo filho (006E8508) com irmao direito [70] (006E8188)...
+Fundindo filho (00B98628) com irmao direito [70] (00B98868)...
 Pai [2-no] entra em underflow. Chave descendo: 68
-Irmao direito [70] fundido -> [68, 70]. Filhos: 006E8308, 006E8208, 006E8168
-Ajuste pai (filho=esq): pai->esq=006E8188, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8188, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8508) (anteriormente filho na pos 0 do pai)
+Irmao direito [70] fundido -> [68, 70]. Filhos: 00B985A8, 00B98828, 00B986C8
+Ajuste pai (filho=esq): pai->esq=00B98868, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98868, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98628) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [68, 70]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8408)...
-Tratando underflow no filho (nInfo=0, 006E8228) do pai [72 -1] (006E8408)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E83E8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98568)...
+Tratando underflow no filho (nInfo=0, 00B98768) do pai [72 -1] (00B98568)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B988C8
 Tentando fusao com irmao direito [76]
-Fundindo filho (006E8228) com irmao direito [76] (006E83E8)...
+Fundindo filho (00B98768) com irmao direito [76] (00B988C8)...
 Pai [2-no] entra em underflow. Chave descendo: 72
-Irmao direito [76] fundido -> [72, 76]. Filhos: 006E8188, 006E8248, 006E82A8
-Ajuste pai (filho=esq): pai->esq=006E83E8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E83E8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8228) (anteriormente filho na pos 0 do pai)
+Irmao direito [76] fundido -> [72, 76]. Filhos: 00B98868, 00B987A8, 00B985E8
+Ajuste pai (filho=esq): pai->esq=00B988C8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B988C8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98768) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [72, 76]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E9070)...
-Tratando underflow no filho (nInfo=0, 006E8408) do pai [80 -1] (006E9070)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E84A8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98C50)...
+Tratando underflow no filho (nInfo=0, 00B98568) do pai [80 -1] (00B98C50)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98888
 Tentando fusao com irmao direito [88]
-Fundindo filho (006E8408) com irmao direito [88] (006E84A8)...
+Fundindo filho (00B98568) com irmao direito [88] (00B98888)...
 Pai [2-no] entra em underflow. Chave descendo: 80
-Irmao direito [88] fundido -> [80, 88]. Filhos: 006E83E8, 006E8448, 006E8468
-Ajuste pai (filho=esq): pai->esq=006E84A8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E84A8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8408) (anteriormente filho na pos 0 do pai)
+Irmao direito [88] fundido -> [80, 88]. Filhos: 00B988C8, 00B98528, 00B98808
+Ajuste pai (filho=esq): pai->esq=00B98888, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98888, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98568) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [80, 88]. Status pai: UNDERFLOW
-Raiz (006E9070) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
-Nova raiz sera o filho esquerdo [80, 88] (006E84A8) da antiga raiz.
-Liberando no da raiz antiga em underflow (006E9070).
+Raiz (00B98C50) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
+Nova raiz sera o filho esquerdo [80, 88] (00B98888) da antiga raiz.
+Liberando no da raiz antiga em underflow (00B98C50).
 --- Remocao de 65 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
 
@@ -5961,15 +5961,15 @@ Removendo o valor: 67
 Valor 67 encontrado no no [67 -1]
 Removendo 67 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8188)...
-Tratando underflow no filho (nInfo=0, 006E8308) do pai [68, 70] (006E8188)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8208
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98868)...
+Tratando underflow no filho (nInfo=0, 00B985A8) do pai [68, 70] (00B98868)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98828
 Tentando fusao com irmao direito [69]
-Fundindo filho (006E8308) com irmao direito [69] (006E8208)...
+Fundindo filho (00B985A8) com irmao direito [69] (00B98828)...
 Pai [3-no], filho=esq. Chave descendo: 68. Pai vira [70]
 Irmao direito [69] fundido -> [68, 69]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8208, pai->cen=006E8168, pai->dir=NULL
-Liberando no em underflow (006E8308) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98828, pai->cen=00B986C8, pai->dir=NULL
+Liberando no em underflow (00B985A8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [68, 69]. Status pai: OK
 --- Remocao de 67 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -6059,26 +6059,26 @@ Removendo o valor: 69
 Valor 69 encontrado no no [69 -1]
 Removendo 69 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8188)...
-Tratando underflow no filho (nInfo=0, 006E8208) do pai [70 -1] (006E8188)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8168
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98868)...
+Tratando underflow no filho (nInfo=0, 00B98828) do pai [70 -1] (00B98868)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B986C8
 Tentando fusao com irmao direito [71]
-Fundindo filho (006E8208) com irmao direito [71] (006E8168)...
+Fundindo filho (00B98828) com irmao direito [71] (00B986C8)...
 Pai [2-no] entra em underflow. Chave descendo: 70
 Irmao direito [71] fundido -> [70, 71]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8168, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8168, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8208) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B986C8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B986C8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98828) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [70, 71]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E83E8)...
-Tratando underflow no filho (nInfo=0, 006E8188) do pai [72, 76] (006E83E8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8248
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B988C8)...
+Tratando underflow no filho (nInfo=0, 00B98868) do pai [72, 76] (00B988C8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B987A8
 Tentando fusao com irmao direito [74]
-Fundindo filho (006E8188) com irmao direito [74] (006E8248)...
+Fundindo filho (00B98868) com irmao direito [74] (00B987A8)...
 Pai [3-no], filho=esq. Chave descendo: 72. Pai vira [76]
-Irmao direito [74] fundido -> [72, 74]. Filhos: 006E8168, 006E83A8, 006E8268
-Ajuste pai (filho=esq): pai->esq=006E8248, pai->cen=006E82A8, pai->dir=NULL
-Liberando no em underflow (006E8188) (anteriormente filho na pos 0 do pai)
+Irmao direito [74] fundido -> [72, 74]. Filhos: 00B986C8, 00B98688, 00B98848
+Ajuste pai (filho=esq): pai->esq=00B987A8, pai->cen=00B985E8, pai->dir=NULL
+Liberando no em underflow (00B98868) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [72, 74]. Status pai: OK
 --- Remocao de 69 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -6164,15 +6164,15 @@ Removendo o valor: 71
 Valor 71 encontrado no no [71 -1]
 Removendo 71 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8248)...
-Tratando underflow no filho (nInfo=0, 006E8168) do pai [72, 74] (006E8248)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E83A8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B987A8)...
+Tratando underflow no filho (nInfo=0, 00B986C8) do pai [72, 74] (00B987A8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98688
 Tentando fusao com irmao direito [73]
-Fundindo filho (006E8168) com irmao direito [73] (006E83A8)...
+Fundindo filho (00B986C8) com irmao direito [73] (00B98688)...
 Pai [3-no], filho=esq. Chave descendo: 72. Pai vira [74]
 Irmao direito [73] fundido -> [72, 73]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E83A8, pai->cen=006E8268, pai->dir=NULL
-Liberando no em underflow (006E8168) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98688, pai->cen=00B98848, pai->dir=NULL
+Liberando no em underflow (00B986C8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [72, 73]. Status pai: OK
 --- Remocao de 71 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -6256,37 +6256,37 @@ Removendo o valor: 73
 Valor 73 encontrado no no [73 -1]
 Removendo 73 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8248)...
-Tratando underflow no filho (nInfo=0, 006E83A8) do pai [74 -1] (006E8248)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8268
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B987A8)...
+Tratando underflow no filho (nInfo=0, 00B98688) do pai [74 -1] (00B987A8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98848
 Tentando fusao com irmao direito [75]
-Fundindo filho (006E83A8) com irmao direito [75] (006E8268)...
+Fundindo filho (00B98688) com irmao direito [75] (00B98848)...
 Pai [2-no] entra em underflow. Chave descendo: 74
 Irmao direito [75] fundido -> [74, 75]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8268, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8268, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E83A8) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98848, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98848, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98688) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [74, 75]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E83E8)...
-Tratando underflow no filho (nInfo=0, 006E8248) do pai [76 -1] (006E83E8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E82A8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B988C8)...
+Tratando underflow no filho (nInfo=0, 00B987A8) do pai [76 -1] (00B988C8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B985E8
 Tentando fusao com irmao direito [78]
-Fundindo filho (006E8248) com irmao direito [78] (006E82A8)...
+Fundindo filho (00B987A8) com irmao direito [78] (00B985E8)...
 Pai [2-no] entra em underflow. Chave descendo: 76
-Irmao direito [78] fundido -> [76, 78]. Filhos: 006E8268, 006E8288, 006E81A8
-Ajuste pai (filho=esq): pai->esq=006E82A8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E82A8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8248) (anteriormente filho na pos 0 do pai)
+Irmao direito [78] fundido -> [76, 78]. Filhos: 00B98848, 00B988A8, 00B98728
+Ajuste pai (filho=esq): pai->esq=00B985E8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B985E8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B987A8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [76, 78]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E84A8)...
-Tratando underflow no filho (nInfo=0, 006E83E8) do pai [80, 88] (006E84A8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8448
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98888)...
+Tratando underflow no filho (nInfo=0, 00B988C8) do pai [80, 88] (00B98888)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98528
 Tentando fusao com irmao direito [84]
-Fundindo filho (006E83E8) com irmao direito [84] (006E8448)...
+Fundindo filho (00B988C8) com irmao direito [84] (00B98528)...
 Pai [3-no], filho=esq. Chave descendo: 80. Pai vira [88]
-Irmao direito [84] fundido -> [80, 84]. Filhos: 006E82A8, 006E8128, 006E8488
-Ajuste pai (filho=esq): pai->esq=006E8448, pai->cen=006E8468, pai->dir=NULL
-Liberando no em underflow (006E83E8) (anteriormente filho na pos 0 do pai)
+Irmao direito [84] fundido -> [80, 84]. Filhos: 00B985E8, 00B98748, 00B986A8
+Ajuste pai (filho=esq): pai->esq=00B98528, pai->cen=00B98808, pai->dir=NULL
+Liberando no em underflow (00B988C8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [80, 84]. Status pai: OK
 --- Remocao de 73 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -6364,15 +6364,15 @@ Removendo o valor: 75
 Valor 75 encontrado no no [75 -1]
 Removendo 75 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E82A8)...
-Tratando underflow no filho (nInfo=0, 006E8268) do pai [76, 78] (006E82A8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8288
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B985E8)...
+Tratando underflow no filho (nInfo=0, 00B98848) do pai [76, 78] (00B985E8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B988A8
 Tentando fusao com irmao direito [77]
-Fundindo filho (006E8268) com irmao direito [77] (006E8288)...
+Fundindo filho (00B98848) com irmao direito [77] (00B988A8)...
 Pai [3-no], filho=esq. Chave descendo: 76. Pai vira [78]
 Irmao direito [77] fundido -> [76, 77]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8288, pai->cen=006E81A8, pai->dir=NULL
-Liberando no em underflow (006E8268) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B988A8, pai->cen=00B98728, pai->dir=NULL
+Liberando no em underflow (00B98848) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [76, 77]. Status pai: OK
 --- Remocao de 75 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -6448,26 +6448,26 @@ Removendo o valor: 77
 Valor 77 encontrado no no [77 -1]
 Removendo 77 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E82A8)...
-Tratando underflow no filho (nInfo=0, 006E8288) do pai [78 -1] (006E82A8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E81A8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B985E8)...
+Tratando underflow no filho (nInfo=0, 00B988A8) do pai [78 -1] (00B985E8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98728
 Tentando fusao com irmao direito [79]
-Fundindo filho (006E8288) com irmao direito [79] (006E81A8)...
+Fundindo filho (00B988A8) com irmao direito [79] (00B98728)...
 Pai [2-no] entra em underflow. Chave descendo: 78
 Irmao direito [79] fundido -> [78, 79]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E81A8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E81A8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8288) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98728, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98728, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B988A8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [78, 79]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8448)...
-Tratando underflow no filho (nInfo=0, 006E82A8) do pai [80, 84] (006E8448)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8128
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98528)...
+Tratando underflow no filho (nInfo=0, 00B985E8) do pai [80, 84] (00B98528)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98748
 Tentando fusao com irmao direito [82]
-Fundindo filho (006E82A8) com irmao direito [82] (006E8128)...
+Fundindo filho (00B985E8) com irmao direito [82] (00B98748)...
 Pai [3-no], filho=esq. Chave descendo: 80. Pai vira [84]
-Irmao direito [82] fundido -> [80, 82]. Filhos: 006E81A8, 006E82C8, 006E8428
-Ajuste pai (filho=esq): pai->esq=006E8128, pai->cen=006E8488, pai->dir=NULL
-Liberando no em underflow (006E82A8) (anteriormente filho na pos 0 do pai)
+Irmao direito [82] fundido -> [80, 82]. Filhos: 00B98728, 00B98648, 00B98608
+Ajuste pai (filho=esq): pai->esq=00B98748, pai->cen=00B986A8, pai->dir=NULL
+Liberando no em underflow (00B985E8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [80, 82]. Status pai: OK
 --- Remocao de 77 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -6539,15 +6539,15 @@ Removendo o valor: 79
 Valor 79 encontrado no no [79 -1]
 Removendo 79 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8128)...
-Tratando underflow no filho (nInfo=0, 006E81A8) do pai [80, 82] (006E8128)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E82C8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98748)...
+Tratando underflow no filho (nInfo=0, 00B98728) do pai [80, 82] (00B98748)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98648
 Tentando fusao com irmao direito [81]
-Fundindo filho (006E81A8) com irmao direito [81] (006E82C8)...
+Fundindo filho (00B98728) com irmao direito [81] (00B98648)...
 Pai [3-no], filho=esq. Chave descendo: 80. Pai vira [82]
 Irmao direito [81] fundido -> [80, 81]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E82C8, pai->cen=006E8428, pai->dir=NULL
-Liberando no em underflow (006E81A8) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98648, pai->cen=00B98608, pai->dir=NULL
+Liberando no em underflow (00B98728) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [80, 81]. Status pai: OK
 --- Remocao de 79 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -6617,31 +6617,31 @@ Removendo o valor: 81
 Valor 81 encontrado no no [81 -1]
 Removendo 81 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8128)...
-Tratando underflow no filho (nInfo=0, 006E82C8) do pai [82 -1] (006E8128)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8428
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98748)...
+Tratando underflow no filho (nInfo=0, 00B98648) do pai [82 -1] (00B98748)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98608
 Tentando fusao com irmao direito [83]
-Fundindo filho (006E82C8) com irmao direito [83] (006E8428)...
+Fundindo filho (00B98648) com irmao direito [83] (00B98608)...
 Pai [2-no] entra em underflow. Chave descendo: 82
 Irmao direito [83] fundido -> [82, 83]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8428, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8428, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E82C8) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98608, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98608, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98648) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [82, 83]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8448)...
-Tratando underflow no filho (nInfo=0, 006E8128) do pai [84 -1] (006E8448)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8488
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98528)...
+Tratando underflow no filho (nInfo=0, 00B98748) do pai [84 -1] (00B98528)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B986A8
 Tentando fusao com irmao direito [86]
-Fundindo filho (006E8128) com irmao direito [86] (006E8488)...
+Fundindo filho (00B98748) com irmao direito [86] (00B986A8)...
 Pai [2-no] entra em underflow. Chave descendo: 84
-Irmao direito [86] fundido -> [84, 86]. Filhos: 006E8428, 006E8148, 006E82E8
-Ajuste pai (filho=esq): pai->esq=006E8488, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8488, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8128) (anteriormente filho na pos 0 do pai)
+Irmao direito [86] fundido -> [84, 86]. Filhos: 00B98608, 00B985C8, 00B98668
+Ajuste pai (filho=esq): pai->esq=00B986A8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B986A8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98748) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [84, 86]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E84A8)...
-Tratando underflow no filho (nInfo=0, 006E8448) do pai [88 -1] (006E84A8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8468
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98888)...
+Tratando underflow no filho (nInfo=0, 00B98528) do pai [88 -1] (00B98888)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98808
 Tentando redistribuicao com irmao direito [92, 96]
 Redistribuindo com irmao direito...
 --- Remocao de 81 concluida com sucesso ---
@@ -6708,15 +6708,15 @@ Removendo o valor: 83
 Valor 83 encontrado no no [83 -1]
 Removendo 83 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8488)...
-Tratando underflow no filho (nInfo=0, 006E8428) do pai [84, 86] (006E8488)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8148
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B986A8)...
+Tratando underflow no filho (nInfo=0, 00B98608) do pai [84, 86] (00B986A8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B985C8
 Tentando fusao com irmao direito [85]
-Fundindo filho (006E8428) com irmao direito [85] (006E8148)...
+Fundindo filho (00B98608) com irmao direito [85] (00B985C8)...
 Pai [3-no], filho=esq. Chave descendo: 84. Pai vira [86]
 Irmao direito [85] fundido -> [84, 85]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8148, pai->cen=006E82E8, pai->dir=NULL
-Liberando no em underflow (006E8428) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B985C8, pai->cen=00B98668, pai->dir=NULL
+Liberando no em underflow (00B98608) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [84, 85]. Status pai: OK
 --- Remocao de 83 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -6780,42 +6780,42 @@ Removendo o valor: 85
 Valor 85 encontrado no no [85 -1]
 Removendo 85 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8488)...
-Tratando underflow no filho (nInfo=0, 006E8148) do pai [86 -1] (006E8488)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E82E8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B986A8)...
+Tratando underflow no filho (nInfo=0, 00B985C8) do pai [86 -1] (00B986A8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98668
 Tentando fusao com irmao direito [87]
-Fundindo filho (006E8148) com irmao direito [87] (006E82E8)...
+Fundindo filho (00B985C8) com irmao direito [87] (00B98668)...
 Pai [2-no] entra em underflow. Chave descendo: 86
 Irmao direito [87] fundido -> [86, 87]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E82E8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E82E8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8148) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98668, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98668, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B985C8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [86, 87]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8448)...
-Tratando underflow no filho (nInfo=0, 006E8488) do pai [88 -1] (006E8448)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E81C8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98528)...
+Tratando underflow no filho (nInfo=0, 00B986A8) do pai [88 -1] (00B98528)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98788
 Tentando fusao com irmao direito [90]
-Fundindo filho (006E8488) com irmao direito [90] (006E81C8)...
+Fundindo filho (00B986A8) com irmao direito [90] (00B98788)...
 Pai [2-no] entra em underflow. Chave descendo: 88
-Irmao direito [90] fundido -> [88, 90]. Filhos: 006E82E8, 006E8328, 006E8348
-Ajuste pai (filho=esq): pai->esq=006E81C8, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E81C8, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8488) (anteriormente filho na pos 0 do pai)
+Irmao direito [90] fundido -> [88, 90]. Filhos: 00B98668, 00B98588, 00B986E8
+Ajuste pai (filho=esq): pai->esq=00B98788, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98788, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B986A8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [88, 90]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E84A8)...
-Tratando underflow no filho (nInfo=0, 006E8448) do pai [92 -1] (006E84A8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8468
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98888)...
+Tratando underflow no filho (nInfo=0, 00B98528) do pai [92 -1] (00B98888)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98808
 Tentando fusao com irmao direito [96]
-Fundindo filho (006E8448) com irmao direito [96] (006E8468)...
+Fundindo filho (00B98528) com irmao direito [96] (00B98808)...
 Pai [2-no] entra em underflow. Chave descendo: 92
-Irmao direito [96] fundido -> [92, 96]. Filhos: 006E81C8, 006E83C8, 006E8F30
-Ajuste pai (filho=esq): pai->esq=006E8468, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8468, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8448) (anteriormente filho na pos 0 do pai)
+Irmao direito [96] fundido -> [92, 96]. Filhos: 00B98788, 00B987E8, 00B98B90
+Ajuste pai (filho=esq): pai->esq=00B98808, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98808, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98528) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [92, 96]. Status pai: UNDERFLOW
-Raiz (006E84A8) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
-Nova raiz sera o filho esquerdo [92, 96] (006E8468) da antiga raiz.
-Liberando no da raiz antiga em underflow (006E84A8).
+Raiz (00B98888) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
+Nova raiz sera o filho esquerdo [92, 96] (00B98808) da antiga raiz.
+Liberando no da raiz antiga em underflow (00B98888).
 --- Remocao de 85 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
 
@@ -6870,15 +6870,15 @@ Removendo o valor: 87
 Valor 87 encontrado no no [87 -1]
 Removendo 87 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E81C8)...
-Tratando underflow no filho (nInfo=0, 006E82E8) do pai [88, 90] (006E81C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8328
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98788)...
+Tratando underflow no filho (nInfo=0, 00B98668) do pai [88, 90] (00B98788)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98588
 Tentando fusao com irmao direito [89]
-Fundindo filho (006E82E8) com irmao direito [89] (006E8328)...
+Fundindo filho (00B98668) com irmao direito [89] (00B98588)...
 Pai [3-no], filho=esq. Chave descendo: 88. Pai vira [90]
 Irmao direito [89] fundido -> [88, 89]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8328, pai->cen=006E8348, pai->dir=NULL
-Liberando no em underflow (006E82E8) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98588, pai->cen=00B986E8, pai->dir=NULL
+Liberando no em underflow (00B98668) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [88, 89]. Status pai: OK
 --- Remocao de 87 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -6932,26 +6932,26 @@ Removendo o valor: 89
 Valor 89 encontrado no no [89 -1]
 Removendo 89 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E81C8)...
-Tratando underflow no filho (nInfo=0, 006E8328) do pai [90 -1] (006E81C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8348
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98788)...
+Tratando underflow no filho (nInfo=0, 00B98588) do pai [90 -1] (00B98788)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B986E8
 Tentando fusao com irmao direito [91]
-Fundindo filho (006E8328) com irmao direito [91] (006E8348)...
+Fundindo filho (00B98588) com irmao direito [91] (00B986E8)...
 Pai [2-no] entra em underflow. Chave descendo: 90
 Irmao direito [91] fundido -> [90, 91]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8348, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8348, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8328) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B986E8, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B986E8, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B98588) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [90, 91]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8468)...
-Tratando underflow no filho (nInfo=0, 006E81C8) do pai [92, 96] (006E8468)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E83C8
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98808)...
+Tratando underflow no filho (nInfo=0, 00B98788) do pai [92, 96] (00B98808)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B987E8
 Tentando fusao com irmao direito [94]
-Fundindo filho (006E81C8) com irmao direito [94] (006E83C8)...
+Fundindo filho (00B98788) com irmao direito [94] (00B987E8)...
 Pai [3-no], filho=esq. Chave descendo: 92. Pai vira [96]
-Irmao direito [94] fundido -> [92, 94]. Filhos: 006E8348, 006E8368, 006E8388
-Ajuste pai (filho=esq): pai->esq=006E83C8, pai->cen=006E8F30, pai->dir=NULL
-Liberando no em underflow (006E81C8) (anteriormente filho na pos 0 do pai)
+Irmao direito [94] fundido -> [92, 94]. Filhos: 00B986E8, 00B987C8, 00B98548
+Ajuste pai (filho=esq): pai->esq=00B987E8, pai->cen=00B98B90, pai->dir=NULL
+Liberando no em underflow (00B98788) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [92, 94]. Status pai: OK
 --- Remocao de 89 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -7001,15 +7001,15 @@ Removendo o valor: 91
 Valor 91 encontrado no no [91 -1]
 Removendo 91 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E83C8)...
-Tratando underflow no filho (nInfo=0, 006E8348) do pai [92, 94] (006E83C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8368
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B987E8)...
+Tratando underflow no filho (nInfo=0, 00B986E8) do pai [92, 94] (00B987E8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B987C8
 Tentando fusao com irmao direito [93]
-Fundindo filho (006E8348) com irmao direito [93] (006E8368)...
+Fundindo filho (00B986E8) com irmao direito [93] (00B987C8)...
 Pai [3-no], filho=esq. Chave descendo: 92. Pai vira [94]
 Irmao direito [93] fundido -> [92, 93]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8368, pai->cen=006E8388, pai->dir=NULL
-Liberando no em underflow (006E8348) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B987C8, pai->cen=00B98548, pai->dir=NULL
+Liberando no em underflow (00B986E8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [92, 93]. Status pai: OK
 --- Remocao de 91 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -7057,31 +7057,31 @@ Removendo o valor: 93
 Valor 93 encontrado no no [93 -1]
 Removendo 93 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E83C8)...
-Tratando underflow no filho (nInfo=0, 006E8368) do pai [94 -1] (006E83C8)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8388
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B987E8)...
+Tratando underflow no filho (nInfo=0, 00B987C8) do pai [94 -1] (00B987E8)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98548
 Tentando fusao com irmao direito [95]
-Fundindo filho (006E8368) com irmao direito [95] (006E8388)...
+Fundindo filho (00B987C8) com irmao direito [95] (00B98548)...
 Pai [2-no] entra em underflow. Chave descendo: 94
 Irmao direito [95] fundido -> [94, 95]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8388, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8388, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E8368) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98548, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98548, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B987C8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [94, 95]. Status pai: UNDERFLOW
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8468)...
-Tratando underflow no filho (nInfo=0, 006E83C8) do pai [96 -1] (006E8468)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8F30
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98808)...
+Tratando underflow no filho (nInfo=0, 00B987E8) do pai [96 -1] (00B98808)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98B90
 Tentando fusao com irmao direito [98]
-Fundindo filho (006E83C8) com irmao direito [98] (006E8F30)...
+Fundindo filho (00B987E8) com irmao direito [98] (00B98B90)...
 Pai [2-no] entra em underflow. Chave descendo: 96
-Irmao direito [98] fundido -> [96, 98]. Filhos: 006E8388, 006E9050, 006E8F90
-Ajuste pai (filho=esq): pai->esq=006E8F30, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8F30, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E83C8) (anteriormente filho na pos 0 do pai)
+Irmao direito [98] fundido -> [96, 98]. Filhos: 00B98548, 00B989B0, 00B98AF0
+Ajuste pai (filho=esq): pai->esq=00B98B90, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98B90, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B987E8) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [96, 98]. Status pai: UNDERFLOW
-Raiz (006E8468) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
-Nova raiz sera o filho esquerdo [96, 98] (006E8F30) da antiga raiz.
-Liberando no da raiz antiga em underflow (006E8468).
+Raiz (00B98808) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
+Nova raiz sera o filho esquerdo [96, 98] (00B98B90) da antiga raiz.
+Liberando no da raiz antiga em underflow (00B98808).
 --- Remocao de 93 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
 
@@ -7122,15 +7122,15 @@ Removendo o valor: 95
 Valor 95 encontrado no no [95 -1]
 Removendo 95 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8F30)...
-Tratando underflow no filho (nInfo=0, 006E8388) do pai [96, 98] (006E8F30)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E9050
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98B90)...
+Tratando underflow no filho (nInfo=0, 00B98548) do pai [96, 98] (00B98B90)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B989B0
 Tentando fusao com irmao direito [97]
-Fundindo filho (006E8388) com irmao direito [97] (006E9050)...
+Fundindo filho (00B98548) com irmao direito [97] (00B989B0)...
 Pai [3-no], filho=esq. Chave descendo: 96. Pai vira [98]
 Irmao direito [97] fundido -> [96, 97]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E9050, pai->cen=006E8F90, pai->dir=NULL
-Liberando no em underflow (006E8388) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B989B0, pai->cen=00B98AF0, pai->dir=NULL
+Liberando no em underflow (00B98548) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [96, 97]. Status pai: OK
 --- Remocao de 95 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
@@ -7170,9 +7170,9 @@ Removendo o valor: 97
 Valor 97 encontrado no no [97 -1]
 Removendo 97 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8F30)...
-Tratando underflow no filho (nInfo=0, 006E9050) do pai [98 -1] (006E8F30)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8F90
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98B90)...
+Tratando underflow no filho (nInfo=0, 00B989B0) do pai [98 -1] (00B98B90)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98AF0
 Tentando redistribuicao com irmao direito [99, 100]
 Redistribuindo com irmao direito...
 --- Remocao de 97 concluida com sucesso ---
@@ -7194,20 +7194,20 @@ Removendo o valor: 98
 Valor 98 encontrado no no [98 -1]
 Removendo 98 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Underflow retornado da subarvore. Tratando no nivel atual (pai=006E8F30)...
-Tratando underflow no filho (nInfo=0, 006E9050) do pai [99 -1] (006E8F30)...
-Filho em underflow e o ESQUERDO. Irmao direito: 006E8F90
+Underflow retornado da subarvore. Tratando no nivel atual (pai=00B98B90)...
+Tratando underflow no filho (nInfo=0, 00B989B0) do pai [99 -1] (00B98B90)...
+Filho em underflow e o ESQUERDO. Irmao direito: 00B98AF0
 Tentando fusao com irmao direito [100]
-Fundindo filho (006E9050) com irmao direito [100] (006E8F90)...
+Fundindo filho (00B989B0) com irmao direito [100] (00B98AF0)...
 Pai [2-no] entra em underflow. Chave descendo: 99
 Irmao direito [100] fundido -> [99, 100]. Filhos: 00000000, 00000000, 00000000
-Ajuste pai (filho=esq): pai->esq=006E8F90, pai->cen=00000000, pai->dir=NULL
-Ajuste pai (underflow): pai->esq=006E8F90, pai->cen=NULL, pai->dir=NULL
-Liberando no em underflow (006E9050) (anteriormente filho na pos 0 do pai)
+Ajuste pai (filho=esq): pai->esq=00B98AF0, pai->cen=00000000, pai->dir=NULL
+Ajuste pai (underflow): pai->esq=00B98AF0, pai->cen=NULL, pai->dir=NULL
+Liberando no em underflow (00B989B0) (anteriormente filho na pos 0 do pai)
 Fusao com irmao direito concluida. No resultante [99, 100]. Status pai: UNDERFLOW
-Raiz (006E8F30) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
-Nova raiz sera o filho esquerdo [99, 100] (006E8F90) da antiga raiz.
-Liberando no da raiz antiga em underflow (006E8F30).
+Raiz (00B98B90) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
+Nova raiz sera o filho esquerdo [99, 100] (00B98AF0) da antiga raiz.
+Liberando no da raiz antiga em underflow (00B98B90).
 --- Remocao de 98 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
 
@@ -7242,9 +7242,9 @@ Removendo o valor: 100
 Valor 100 encontrado no no [100 -1]
 Removendo 100 de um no FOLHA.
 Folha e 2-no. Remocao causa UNDERFLOW.
-Raiz (006E8F90) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
+Raiz (00B98AF0) entrou em underflow (nInfo=0). Ajustando a raiz da arvore...
 Arvore ficou vazia apos remocao da raiz.
-Liberando no da raiz antiga em underflow (006E8F90).
+Liberando no da raiz antiga em underflow (00B98AF0).
 --- Remocao de 100 concluida com sucesso ---
 SUCESSO: Valor removido com sucesso!
 
