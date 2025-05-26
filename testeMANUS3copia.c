@@ -610,7 +610,7 @@ int main()
 
     // Teste inicial
     printf("Inserindo valores (1-10)...\n");
-    for (int i = 1; i<=30; i++){
+    for (int i = 1; i<=0; i++){
         insere_23(&raiz, i);
     }
     printf("Insercao concluida.\n");
