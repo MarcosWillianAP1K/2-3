@@ -12,7 +12,7 @@
 // gcc -o teste teste_da_2-3.c ../2-3_funcional_por_enquanto.c bibs_auxiliares/funcao_sistema.c bibs_auxiliares/Escrever_resultado.c
 
 // Define o tamanho do vetor para inserção aleatória
-#define TAM_VETOR 10
+#define TAM_VETOR 100
 #define DIR_RESULTADOS "Resultados"
 
 // Função para criar diretório se não existir
