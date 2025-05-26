@@ -554,9 +554,9 @@ void imprime_arvore_visual(Arv23 *raiz, char *prefixo, int eh_ultimo, int eh_rai
     {
         printf("%s", prefixo);
         if (!eh_raiz) {
-             printf("%s", eh_ultimo ? "+-- " : "+-- ");
+             printf("%s", eh_ultimo ? "+------ " : "+------ ");
         } else {
-             printf("    ");
+             printf("         ");
         }
 
         if (raiz->nInfo == 1)
@@ -571,7 +571,7 @@ void imprime_arvore_visual(Arv23 *raiz, char *prefixo, int eh_ultimo, int eh_rai
         if (raiz->esq != NULL || raiz->cen != NULL || raiz->dir != NULL)
         {
             char novo_prefixo[512];
-            sprintf(novo_prefixo, "%s%s", prefixo, eh_raiz? "    " : (eh_ultimo ? "    " : "|   "));
+            sprintf(novo_prefixo, "%s%s", prefixo, eh_raiz? "         " : (eh_ultimo ? "         " : "|        "));
             int tem_cen = (raiz->cen != NULL);
             int tem_dir = (raiz->dir != NULL);
 
@@ -597,13 +597,9 @@ int main()
 
     // Teste inicial
     printf("Inserindo valores (1-7)...\n");
-    insere_23(&raiz, 4);
-    insere_23(&raiz, 2);
-    insere_23(&raiz, 6);
-    insere_23(&raiz, 1);
-    insere_23(&raiz, 3);
-    insere_23(&raiz, 5);
-    insere_23(&raiz, 7);
+    for (int i = 1; i<=10; i++){
+        insere_23(&raiz, i);
+    }
     printf("Insercao concluida.\n");
 
     do
