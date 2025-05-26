@@ -82,6 +82,42 @@ int remover_23_recursivo(Arv23 **raiz, int valor, int *sobe, Arv23 **pai);
 
 // Caso 1:
 
+int no_folha_com_1_info(Arv23 **raiz, int valor, Arv23 **pai)
+{
+    //Apenas simulando se fosse retornar a informação
+    int retorno = (*raiz)->info1;
+
+    if (pai != NULL && *pai != NULL)
+    {
+        if ((*pai)->esq == *raiz)
+        {
+            if ((*pai)->nInfo == 1)
+            {
+                
+            }
+            else
+            {
+                
+            }
+        }
+        else if ((*pai)->cen == *raiz)
+        {
+            
+        }
+        else if ((*pai)->dir == *raiz)
+        {
+            
+        }
+    }
+    else //Pro caso o pai seja null, ou seja é raiz
+    {
+        free(*raiz);
+        *raiz = NULL;
+    }
+
+    return retorno;
+}
+
 // Caso 2:
 
 // Caso 3:
